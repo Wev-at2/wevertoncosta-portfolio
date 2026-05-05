@@ -2,7 +2,7 @@ export function swiperInit() {
   document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.wc-projects__items', {
       loop: true,
-      effect: "coverflow",
+      // effect: "coverflow",
       centeredSlides: true,
       centeredSlidesBounds: true,
       slidesPerView: "auto",
