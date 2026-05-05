@@ -11,6 +11,7 @@ section {
     width: 100%;
     box-sizing: border-box;
     filter: drop-shadow(5px 10px 5px black) ; 
+    scroll-margin-top: 6rem;
 }
 section .container {
     max-width: 80%;
@@ -27,6 +28,29 @@ section h2 {
 section p {
     line-height: 1.5;
     margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .wc-main {
+        scroll-snap-type: y mandatory;
+    }
+
+    .wc-main > section {
+        min-height: 100vh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 /* @media only screen and (min-width: 1024px) {
     section .container {
