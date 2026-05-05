@@ -39,7 +39,9 @@
     position: relative;
     box-shadow: 0 4px 8px var(--color-white-transparency-2);
     overflow: hidden;
-    transition: var(--transition);
+    transition: transform .2s ease, box-shadow .2s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
 
 .wc-projects__item::before {
@@ -225,7 +227,7 @@ ul.wc-projects__item--links a {
     }
 
     .wc-projects__item:is(:hover, :focus, :focus-visible) {
-        transform: scale(1.05);
+        transform: perspective(1000px) scale(1.02);
     }
 }
 
