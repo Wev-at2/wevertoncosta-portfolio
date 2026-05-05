@@ -15,6 +15,10 @@
     box-sizing: border-box;
     transition: var(--transition);
     width: 100%;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 0.9rem 0.35rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
 }
 .wc-skills__item svg {
     width: 100%;
@@ -26,6 +30,10 @@
 .wc-skills__item:is(:hover, :focus, :focus-visible) svg {
     transform: scale(1.2);
     filter: drop-shadow(0 0 8px var(--color-white-transparency-2));
+}
+.wc-skills__item:is(:hover, :focus, :focus-visible) {
+    border-color: var(--color-white-transparency-2);
+    transform: translateY(-4px);
 }
 #wc-skills__css svg use {
     fill: #663399;
