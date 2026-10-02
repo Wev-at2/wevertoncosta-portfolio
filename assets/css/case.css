@@ -79,14 +79,21 @@
     font-size: var(--font-size-small);
     letter-spacing: 0.05em;
     color: var(--secondary-color);
-    padding: 0.85rem 1.25rem;
-    border: 2px solid var(--secondary-color);
-    transition: var(--transition);
+    padding: 0.9rem 1.4rem;
+    border: 1px solid var(--color-white-transparency);
+    border-radius: 999px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.wc-case__link:first-child {
+    background: var(--accent-solid);
+    border-color: var(--accent-solid);
+    box-shadow: 0 12px 32px -12px rgba(47, 91, 255, 0.8);
 }
 
 .wc-case__link:is(:hover, :focus-visible) {
-    color: var(--color-black);
-    background: var(--secondary-color);
+    background: var(--color-cobalt-400);
+    border-color: var(--color-cobalt-400);
 }
 
 /* //// VITRINE: DESKTOP + CELULAR //// */
@@ -101,7 +108,7 @@
     border-radius: 12px;
     overflow: hidden;
     background: var(--color-gray-6);
-    box-shadow: 0 40px 100px -40px rgba(13, 62, 128, 0.9);
+    box-shadow: 0 40px 100px -40px rgba(47, 91, 255, 0.6);
 }
 
 .wc-case__browser-bar {

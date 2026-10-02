@@ -17,7 +17,7 @@
 .wc-about__description strong,
 .wc-about__description a {
     font-weight: 700;
-    color: var(--color-golden-1);
+    color: var(--primary-color);
 }
 
 .wc-about__description a {

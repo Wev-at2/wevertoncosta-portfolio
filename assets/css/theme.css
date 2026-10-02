@@ -1,0 +1,262 @@
+/* //// TEMA V3 · PALETA COBALT ////
+   Camada final de estilos: aplica a paleta azul (sem dourado) aos componentes
+   e concentra o layout novo do hero e do "Sobre mim". */
+
+/* ---------- Tipografia de seção ---------- */
+section h2 {
+    color: var(--secondary-color);
+}
+
+.wc-eyebrow {
+    color: var(--primary-color);
+}
+
+.wc-accent-text {
+    background: var(--color-accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------- Botões ---------- */
+.wc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-small);
+    letter-spacing: 0.06em;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wc-btn--primary {
+    color: var(--color-white);
+    background: var(--accent-solid);
+    box-shadow: 0 12px 32px -12px rgba(47, 91, 255, 0.8);
+}
+
+.wc-btn--primary:is(:hover, :focus-visible) {
+    background: var(--color-cobalt-400);
+    transform: translateY(-2px);
+}
+
+.wc-btn--ghost {
+    color: var(--secondary-color);
+    border-color: var(--color-white-transparency);
+}
+
+.wc-btn--ghost:is(:hover, :focus-visible) {
+    border-color: var(--primary-color);
+    background: rgba(147, 176, 255, 0.08);
+}
+
+/* ---------- Header translúcido ---------- */
+.wc-header,
+.wc-header.fixed {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.wc-header.fixed {
+    background: rgba(4, 6, 15, 0.72);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-bottom-color: var(--color-white-transparency-2);
+}
+
+@media only screen and (max-width: 1024px) {
+    .wc-header {
+        background: rgba(4, 6, 15, 0.85);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        border-bottom-color: var(--color-white-transparency-2);
+    }
+}
+
+.wc-header__menu--nav_item a::after {
+    background: var(--color-accent-gradient);
+}
+
+/* ---------- Hero (sem foto) ---------- */
+.wc-main__banner--content {
+    max-width: 56rem;
+    right: auto;
+}
+
+.wc-main__banner--content_text {
+    gap: 1.5rem;
+}
+
+.wc-main__banner--eyebrow {
+    width: fit-content;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-small);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-gray-2);
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--color-white-transparency-2);
+    border-radius: 999px;
+    background: rgba(12, 20, 48, 0.6);
+}
+
+.wc-main__banner--content_title {
+    line-height: 1.08;
+}
+
+.wc-main__banner--content_description {
+    max-width: 44rem;
+    color: var(--color-gray-2);
+    line-height: 1.6;
+}
+
+.wc-main__banner--content_actions {
+    gap: 1rem 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.wc-main__banner--content_secondary,
+.wc-main__banner--content_secondary:is(:hover, :focus-visible) {
+    transform: none;
+    font-size: var(--font-size-small);
+}
+
+@media only screen and (max-width: 767px) {
+    .wc-main__banner--content {
+        max-width: 100%;
+    }
+
+    .wc-main__banner--content_actions {
+        justify-content: flex-start;
+    }
+
+    .wc-btn {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}
+
+/* ---------- Sobre mim com foto ---------- */
+.wc-about__content.container {
+    display: grid;
+    grid-template-columns: minmax(14rem, 0.8fr) 2fr;
+    align-items: center;
+    gap: 3rem 4rem;
+    max-width: 80%;
+}
+
+.wc-about__photo {
+    position: relative;
+    margin: 0;
+}
+
+.wc-about__photo::before {
+    content: "";
+    position: absolute;
+    inset: -12% -12% auto auto;
+    width: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(47, 91, 255, 0.45), transparent 70%);
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.wc-about__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    border: 1px solid var(--color-white-transparency);
+    box-shadow: 0 30px 80px -30px rgba(47, 91, 255, 0.6);
+}
+
+.wc-about__description strong,
+.wc-about__description a {
+    color: var(--primary-color);
+}
+
+@media only screen and (min-width: 767px) {
+    .wc-about::before {
+        content: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wc-about__content.container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .wc-about__photo {
+        width: 70%;
+        max-width: 18rem;
+    }
+
+    .wc-about__description {
+        text-align: left;
+    }
+}
+
+/* ---------- Processo, habilidades e experiência ---------- */
+.wc-process__num {
+    background: var(--color-accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.wc-process__step,
+.wc-skill-group {
+    background: var(--color-surface-gradient);
+}
+
+.wc-experience__item {
+    background: var(--color-surface-gradient);
+    border: 1px solid var(--color-white-transparency-2);
+    border-radius: 16px;
+}
+
+.wc-experience__item:has(details[open]) {
+    border: 1px solid var(--color-white-transparency);
+    box-shadow: 0 24px 70px -30px rgba(47, 91, 255, 0.55);
+}
+
+.wc-experience__item ul li::marker {
+    color: var(--primary-color);
+}
+
+/* ---------- Contato ---------- */
+.wc-contact__link {
+    border: 1px solid var(--color-white-transparency);
+    border-radius: 999px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.wc-contact__link:is(:hover, :focus, :focus-visible) {
+    color: var(--color-white);
+    border-color: var(--accent-solid);
+    background: var(--accent-solid);
+    box-shadow: none;
+}
+
+/* ---------- Rodapé ---------- */
+.wc-footer {
+    background: var(--color-ink-900);
+    border-top: 1px solid var(--color-white-transparency-2);
+}
+
+/* ---------- Foco visível na cor de destaque ---------- */
+:focus-visible {
+    outline-color: var(--primary-color);
+}
+
+/* Links dentro de texto: sublinhado para não depender só da cor (WCAG 1.4.1) */
+.wc-footer__built a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

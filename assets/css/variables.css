@@ -29,33 +29,41 @@
     --line-height-big: 2;
 
     /* //// COLORS //// */
+    /* Paleta "Cobalt": parte do azul da marca (#0e1e5b) e vai do quase-preto
+       azulado até o azul gelo. Ciano só como destaque pontual. */
     --color-black: #000000;
     --color-white: #ffffff;
-    --color-red: #ff0000;
-    --color-purple: #340d4c;
+    --color-red: #ff5d73;
+    --color-purple: #2a1a6e;
+
+    --color-ink-950: #04060f;  /* fundo */
+    --color-ink-900: #070b1a;
+    --color-ink-800: #0c1430;  /* superfícies */
 
     --color-blue-1: #3562a6;
-    --color-blue-2: #0e1e5b;
+    --color-blue-2: #0e1e5b;   /* azul da marca */
     --color-blue-3: #091442;
     --color-blue-4: #0d3e80;
     --color-blue-5: #093366;
     --color-blue-6: #051933;
     --color-blue-7: #00092b;
 
-    --color-golden-1: #daa520;
-    --color-golden-2: #80610d;
-    --color-golden-3: #332e05;
+    --color-cobalt-600: #1f45d6;
+    --color-cobalt-500: #2f5bff; /* botões e preenchimentos */
+    --color-cobalt-400: #5b82ff;
+    --color-cobalt-300: #93b0ff; /* textos de destaque sobre fundo escuro */
+    --color-cyan-300: #7fe0ff;
 
-    --color-gray-1: #efefef;
-    --color-gray-2: #d9d9d9;
-    --color-gray-3: #cccccc;
-    --color-gray-4: #808080;
-    --color-gray-5: #383838;
-    --color-gray-6: #333333;
+    --color-gray-1: #eef2ff;
+    --color-gray-2: #d5dcf0;
+    --color-gray-3: #b4bfdc;
+    --color-gray-4: #8591b3;
+    --color-gray-5: #2a3350;
+    --color-gray-6: #1c2440;
 
-    --color-black-transparency: #000000b3;
-    --color-white-transparency: #ffffffb3;
-    --color-white-transparency-2: #ffffff3d;
+    --color-black-transparency: #04060fb3;
+    --color-white-transparency: rgba(147, 176, 255, 0.45);
+    --color-white-transparency-2: rgba(147, 176, 255, 0.16);
 
     --color-linear-gradient-1: linear-gradient(
         0deg,
@@ -64,32 +72,36 @@
     );
     --color-linear-gradient-2: linear-gradient(
         0deg,
-        var(--color-black) 0%,
+        var(--color-ink-950) 0%,
         var(--color-blue-2) 50%,
-        var(--color-black) 100%
+        var(--color-ink-950) 100%
     );
     --color-linear-gradient-3: linear-gradient(
         180deg,
-        var(--color-black) 0%,
+        var(--color-ink-950) 0%,
         var(--color-blue-2) 30%,
-        var(--color-black) 80%
+        var(--color-ink-950) 80%
     );
     --color-radial-gradient-1: radial-gradient(
         circle,
-        var(--color-blue-2) 0%,
-        var(--color-black) 20%
+        rgba(31, 69, 214, 0.55) 0%,
+        rgba(14, 30, 91, 0.35) 9%,
+        transparent 22%
     );
+    --color-accent-gradient: linear-gradient(90deg, var(--color-cobalt-400), var(--color-cyan-300));
+    --color-surface-gradient: linear-gradient(180deg, rgba(147, 176, 255, 0.07), rgba(147, 176, 255, 0.015));
 
     --color-matching-1: var(--color-blue-3);
     --color-matching-2: var(--color-blue-1);
-    --color-matching-3: var(--color-golden-3);
-    --color-matching-4: var(--color-golden-2);
+    --color-matching-3: var(--color-cobalt-600);
+    --color-matching-4: var(--color-cobalt-400);
     --color-matching-5: var(--color-gray-3);
     --color-matching-6: var(--color-gray-6);
 
-    --main-bg-color: var(--color-black);
-    --primary-color: var(--color-golden-1);
+    --main-bg-color: var(--color-ink-950);
+    --primary-color: var(--color-cobalt-300);
     --secondary-color: var(--color-white);
+    --accent-solid: var(--color-cobalt-500);
 
     /* //// TRANSITIONS //// */
     --transition: all 0.4s ease;
@@ -97,10 +109,10 @@
 
     /* //// BOX-SHADOW //// */
     --boxshadow-hover-1: 1px 1px 20px -2px var(--color-white-transparency);
-    --boxshadow-slide-golden_down: inset 0 100px 0 0 var(--primary-color);
-    --boxshadow-slide-golden_right: inset 400px 0 0 0 var(--primary-color);
-    --boxshadow-slide-golden_left: inset 0 0 0 50px var(--primary-color);
-    --boxshadow-slide-golden_diagonal: inset 400px 50px 0 0 var(--primary-color);
+    --boxshadow-slide-accent_down: inset 0 100px 0 0 var(--primary-color);
+    --boxshadow-slide-accent_right: inset 400px 0 0 0 var(--primary-color);
+    --boxshadow-slide-accent_left: inset 0 0 0 50px var(--primary-color);
+    --boxshadow-slide-accent_diagonal: inset 400px 50px 0 0 var(--primary-color);
     --boxshadow-slide-white_down: inset 0 100px 0 0 var(--secondary-color);
     --boxshadow-slide-white_right: inset 400px 0 0 0 var(--secondary-color);
     --boxshadow-slide-white_left: inset 0 0 0 50px var(--secondary-color);
@@ -149,10 +161,10 @@ element {
 
     /* BOX-SHADOWS */
     box-shadow: var(--boxshadow-hover-1);
-    box-shadow: var(--boxshadow-slide-golden_down);
-    box-shadow: var(--boxshadow-slide-golden_right);
-    box-shadow: var(--boxshadow-slide-golden_left);
-    box-shadow: var(--boxshadow-slide-golden_diagonal);
+    box-shadow: var(--boxshadow-slide-accent_down);
+    box-shadow: var(--boxshadow-slide-accent_right);
+    box-shadow: var(--boxshadow-slide-accent_left);
+    box-shadow: var(--boxshadow-slide-accent_diagonal);
     box-shadow: var(--boxshadow-slide-white_down);
     box-shadow: var(--boxshadow-slide-white_right);
     box-shadow: var(--boxshadow-slide-white_left);

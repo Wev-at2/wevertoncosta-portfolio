@@ -60,10 +60,6 @@
     "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Sass", "PHP", "WordPress", "Shopify", "VTEX", "Liquid", "Figma", "UI Design", "Acessibilidade WCAG", "Core Web Vitals", "SEO Técnico"]
   }
   </script>
-
-  <link rel="preload" as="image" href="./assets/img/wc-profile-20260206-1.webp"
-    imagesrcset="./assets/img/wc-profile-20260206-1-480.webp 480w, ./assets/img/wc-profile-20260206-1.webp 800w"
-    imagesizes="(max-width: 767px) 80vw, 30vw" fetchpriority="high">
   <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/MonumentExtended-Regular.woff2" crossorigin>
   <link rel="stylesheet" href="./assets/css/style.min.css">
 
@@ -114,40 +110,29 @@
             srcset="./assets/img/wc.mainHome-BG-2-1-1440.webp 1440w, ./assets/img/wc.mainHome-BG-2-1.webp 2400w"
             sizes="100vw">
           <source media="(max-width: 768px)" srcset="./assets/img/wc.mainHome-BG-9-16.webp">
-          <img class="wc-main__banner--img" src="./assets/img/wc.mainHome-BG-2-1-1440.webp" alt="" width="1440" height="720"
+          <img class="wc-main__banner--img" src="./assets/img/wc.mainHome-BG-2-1-1440.webp" alt="" width="1440" height="720" fetchpriority="high"
             style="display: block; max-width: 100%; height: auto;">
         </picture>
         <div class="wc-main__banner--content">
           <div class="wc-main__banner--content_text">
+            <p class="wc-main__banner--eyebrow">Front-end · UI Design · Web Performance</p>
             <h1 class="wc-main__banner--content_title">
               <span class="visually-hidden">Weverton Costa, Desenvolvedor Front-end &amp; UI Designer: </span>
-              Design + Código com foco em resultado
+              Design + Código <span class="wc-accent-text">com foco em resultado</span>
             </h1>
             <p class="wc-main__banner--content_description">
               Sou Weverton Costa, Desenvolvedor Front-end e UI Designer. Há mais de 4 anos crio sites e e-commerces
-              rápidos, acessíveis e responsivos para marcas como Kérastase, Soul Hara e ANAC.
+              rápidos, acessíveis e responsivos, de experiências 3D com Three.js a lojas em Shopify e VTEX, para marcas
+              como Wisionary Lab, Kérastase e ANAC.
             </p>
             <div class="wc-main__banner--content_actions">
-              <a class="wc-main__banner--content_link" href="#wc-projects">
-                <span class="text">Ver projetos</span>
-                <span class="line -right"></span>
-                <span class="line -top"></span>
-                <span class="line -left"></span>
-                <span class="line -bottom"></span>
-              </a>
-              <a class="wc-main__banner--content_secondary" href="./assets/curriculo-weverton-costa.pdf"
-                download>Baixar CV <span aria-hidden="true">↓</span></a>
+              <a class="wc-btn wc-btn--primary" href="#wc-projects">Ver projetos <span aria-hidden="true">→</span></a>
+              <a class="wc-btn wc-btn--ghost" href="./assets/curriculo-weverton-costa.pdf" download>Baixar CV <span
+                  aria-hidden="true">↓</span></a>
               <a class="wc-main__banner--content_secondary" href="https://www.linkedin.com/in/weverton-costa/"
                 target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span><span
                   class="visually-hidden"> (abre em nova aba)</span></a>
             </div>
-          </div>
-          <div class="wc-main__banner--content_img">
-            <img src="./assets/img/wc-profile-20260206-1.webp"
-              srcset="./assets/img/wc-profile-20260206-1-480.webp 480w, ./assets/img/wc-profile-20260206-1.webp 800w"
-              sizes="(max-width: 767px) 80vw, 30vw"
-              alt="Foto de Weverton Costa, Desenvolvedor Front-end e UI Designer" width="800" height="800"
-              fetchpriority="high" style="display: block; max-width: 100%; height: auto;">
           </div>
         </div>
       </div>
@@ -157,8 +142,8 @@
       <div class="container">
         <h2 class="wc-brands__title" id="wc-brands-title">Marcas que já passaram pelo meu código</h2>
         <div class="wc-brands__track">
-          <ul class="wc-brands__list"><li>Kérastase Paris</li><li>L'Oréal</li><li>ANAC</li><li>Soul Hara</li><li>Hausport</li><li>IDA</li><li>W.E.R.</li><li>Gesstorha</li></ul>
-          <ul class="wc-brands__list" aria-hidden="true"><li>Kérastase Paris</li><li>L'Oréal</li><li>ANAC</li><li>Soul Hara</li><li>Hausport</li><li>IDA</li><li>W.E.R.</li><li>Gesstorha</li></ul>
+          <ul class="wc-brands__list"><li>Wisionary Lab</li><li>Kérastase Paris</li><li>L'Oréal</li><li>ANAC</li><li>Village Home Center</li><li>Soul Hara</li><li>Hausport</li><li>W.E.R.</li><li>Gesstorha</li></ul>
+          <ul class="wc-brands__list" aria-hidden="true"><li>Wisionary Lab</li><li>Kérastase Paris</li><li>L'Oréal</li><li>ANAC</li><li>Village Home Center</li><li>Soul Hara</li><li>Hausport</li><li>W.E.R.</li><li>Gesstorha</li></ul>
         </div>
       </div>
     </section>
@@ -168,177 +153,199 @@
         <p class="wc-eyebrow">Cases selecionados</p>
         <h2 class="wc-projects__title">Projetos</h2>
         <ul class="wc-cases">
-          <li class="wc-case-card">
-            <a class="wc-case-card__link" href="./projetos/anac/">
-              <div class="wc-case-card__media">
-                <img src="./assets/img/cases/anac-desktop-640.webp"
-                  srcset="./assets/img/cases/anac-desktop-640.webp 640w, ./assets/img/cases/anac-desktop.webp 1200w"
-                  sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy"
-                  decoding="async">
+          <li class="wc-case-card wc-case-card--featured">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/wisionary-desktop-640.webp"
+                srcset="./assets/img/cases/wisionary-desktop-640.webp 640w, ./assets/img/cases/wisionary-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 55vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            </div>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Site institucional · WordPress + Three.js</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="./projetos/wisionary-lab/">Wisionary Lab</a></h3>
+              <p class="wc-case-card__desc">Site institucional criado para uma agência de presença digital. Tema WordPress próprio em PHP, cenas 3D interativas com Three.js sincronizadas ao scroll e JavaScript ES6+ modular, sem sacrificar performance nem a autonomia de conteúdo do cliente.</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>WordPress</li>
+                  <li>PHP</li>
+                  <li>Three.js</li>
+                  <li>JavaScript ES6+</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver case <span aria-hidden="true">→</span></span>
               </div>
-              <div class="wc-case-card__body">
-                <p class="wc-eyebrow">Site institucional · WordPress</p>
-                <h3 class="wc-case-card__title">ANAC (Casa do Cardíaco)</h3>
-                <p class="wc-case-card__desc">Redesign do site de uma associação com 60 anos de história no acolhimento a pessoas em tratamento hospitalar, com foco em acessibilidade e mobile.</p>
-                <ul class="wc-tags" aria-label="Tecnologias">
-              <li>WordPress</li>
-              <li>PHP</li>
-              <li>JavaScript</li>
-              <li>WCAG 2.1</li>
-                </ul>
-                <span class="wc-case-card__cta">Ver case <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+            </div>
           </li>
           <li class="wc-case-card">
-            <a class="wc-case-card__link" href="./projetos/soul-hara/">
-              <div class="wc-case-card__media">
-                <img src="./assets/img/cases/soulhara-desktop-640.webp"
-                  srcset="./assets/img/cases/soulhara-desktop-640.webp 640w, ./assets/img/cases/soulhara-desktop.webp 1200w"
-                  sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy"
-                  decoding="async">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/anac-desktop-640.webp"
+                srcset="./assets/img/cases/anac-desktop-640.webp 640w, ./assets/img/cases/anac-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            </div>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Site institucional · WordPress</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="./projetos/anac/">ANAC (Casa do Cardíaco)</a></h3>
+              <p class="wc-case-card__desc">Redesign do site de uma associação com 60 anos de história no acolhimento a pessoas em tratamento hospitalar, com foco em acessibilidade e mobile.</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>WordPress</li>
+                  <li>PHP</li>
+                  <li>JavaScript</li>
+                  <li>WCAG 2.1</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver case <span aria-hidden="true">→</span></span>
               </div>
-              <div class="wc-case-card__body">
-                <p class="wc-eyebrow">E-commerce · Shopify</p>
-                <h3 class="wc-case-card__title">Soul Hara</h3>
-                <p class="wc-case-card__desc">Loja de moda amazônica autoral com tema customizado em Liquid, experiência de compra otimizada e SEO de produto.</p>
-                <ul class="wc-tags" aria-label="Tecnologias">
-              <li>Shopify</li>
-              <li>Liquid</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-                </ul>
-                <span class="wc-case-card__cta">Ver case <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+            </div>
           </li>
           <li class="wc-case-card">
-            <a class="wc-case-card__link" href="./projetos/kerastase/">
-              <div class="wc-case-card__media">
-                <img src="./assets/img/cases/kerastase-desktop-640.webp"
-                  srcset="./assets/img/cases/kerastase-desktop-640.webp 640w, ./assets/img/cases/kerastase-desktop.webp 1200w"
-                  sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy"
-                  decoding="async">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/werti-desktop-640.webp"
+                srcset="./assets/img/cases/werti-desktop-640.webp 640w, ./assets/img/cases/werti-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            </div>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Site institucional · WordPress</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="./projetos/wer-ti/">W.E.R. Engenharia e Tecnologia</a></h3>
+              <p class="wc-case-card__desc">Redesign do site de uma empresa de infraestrutura de TI e datacenters, com estrutura de conteúdo personalizada.</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>WordPress</li>
+                  <li>PHP</li>
+                  <li>JavaScript</li>
+                  <li>SEO</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver case <span aria-hidden="true">→</span></span>
               </div>
-              <div class="wc-case-card__body">
-                <p class="wc-eyebrow">Landing pages · Campanha</p>
-                <h3 class="wc-case-card__title">Kérastase Paris</h3>
-                <p class="wc-case-card__desc">Landing pages de lançamento com formulários de cadastro integrados ao CRM da marca, para as linhas Blond Action e Curl Manifesto.</p>
-                <ul class="wc-tags" aria-label="Tecnologias">
-              <li>Pug</li>
-              <li>Sass</li>
-              <li>JavaScript</li>
-              <li>Gulp</li>
-                </ul>
-                <span class="wc-case-card__cta">Ver case <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+            </div>
           </li>
           <li class="wc-case-card">
-            <a class="wc-case-card__link" href="./projetos/wer-ti/">
-              <div class="wc-case-card__media">
-                <img src="./assets/img/cases/werti-desktop-640.webp"
-                  srcset="./assets/img/cases/werti-desktop-640.webp 640w, ./assets/img/cases/werti-desktop.webp 1200w"
-                  sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy"
-                  decoding="async">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/hausport-desktop-640.webp"
+                srcset="./assets/img/cases/hausport-desktop-640.webp 640w, ./assets/img/cases/hausport-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            </div>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">E-commerce · Olist Vnda</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="https://www.hausport.com.br" target="_blank" rel="noopener">Hausport<span class="visually-hidden"> (abre em nova aba)</span></a></h3>
+              <p class="wc-case-card__desc">E-commerce de moda esportiva com templates customizados em Liquid e implementação da vitrine de produtos.</p>
+                <p class="wc-case-card__partner">Em parceria com The Alfred (Série //A Digital)</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>Olist Vnda</li>
+                  <li>Liquid</li>
+                  <li>Sass</li>
+                  <li>JavaScript</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver site <span aria-hidden="true">↗</span></span>
               </div>
-              <div class="wc-case-card__body">
-                <p class="wc-eyebrow">Site institucional · WordPress</p>
-                <h3 class="wc-case-card__title">W.E.R. Engenharia e Tecnologia</h3>
-                <p class="wc-case-card__desc">Redesign do site de uma empresa de infraestrutura de TI e datacenters, com estrutura de conteúdo personalizada.</p>
-                <ul class="wc-tags" aria-label="Tecnologias">
-              <li>WordPress</li>
-              <li>PHP</li>
-              <li>JavaScript</li>
-              <li>SEO</li>
-                </ul>
-                <span class="wc-case-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </li>
+          <li class="wc-case-card">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/village-desktop-640.webp"
+                srcset="./assets/img/cases/village-desktop-640.webp 640w, ./assets/img/cases/village-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            </div>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Redesign de UX · Figma</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="https://www.figma.com/proto/gO29cdu7KSeqZ5EA1XKEN9/Village-Home-Center--Redesign---c%C3%B3pia-?node-id=373-2&t=MuSoUR7m7YS3qUdv-1" target="_blank" rel="noopener">Village Home Center<span class="visually-hidden"> (abre em nova aba)</span></a></h3>
+              <p class="wc-case-card__desc">Redesign estratégico do e-commerce com foco em UX e mobile-first. Desenhei a nova experiência no Figma; o desenvolvimento e a publicação foram feitos pela 732 Mídia Marketing.</p>
+                <p class="wc-case-card__partner">Em parceria com 732 Mídia Marketing</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>Figma</li>
+                  <li>UX Design</li>
+                  <li>UI Design</li>
+                  <li>Mobile-first</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver protótipo <span aria-hidden="true">↗</span></span>
+                  <a class="wc-case-card__extra" href="https://www.villagehomecenter.com.br/" target="_blank" rel="noopener">Site publicado<span class="visually-hidden">: Village Home Center</span> <span
+                      aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
               </div>
-            </a>
-          </li>
-        </ul>
-
-        <h3 class="wc-others__title">Outros projetos</h3>
-        <ul class="wc-others">
-          <li class="wc-other">
-            <div class="wc-other__info">
-              <h4 class="wc-other__name">Hausport</h4>
-              <p class="wc-other__kind">E-commerce · Olist Vnda</p>
-            </div>
-            <p class="wc-other__desc">Templates em Liquid e vitrine de produtos, com a agência The Alfred.</p>
-            <ul class="wc-tags wc-tags--small" aria-label="Tecnologias">
-              <li>Liquid</li>
-              <li>Sass</li>
-              <li>JavaScript</li>
-            </ul>
-            <div class="wc-other__links">
-                <a href="https://www.hausport.com.br" target="_blank" rel="noopener">Ver site<span class="visually-hidden">: Hausport</span> <span
-                    aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
             </div>
           </li>
-          <li class="wc-other">
-            <div class="wc-other__info">
-              <h4 class="wc-other__name">Gesstorha</h4>
-              <p class="wc-other__kind">Site institucional · WordPress</p>
+          <li class="wc-case-card">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/curl-desktop-640.webp"
+                srcset="./assets/img/cases/curl-desktop-640.webp 640w, ./assets/img/cases/curl-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
             </div>
-            <p class="wc-other__desc">Site em WordPress com PHP e ACF, com a agência Volúpia Digital.</p>
-            <ul class="wc-tags wc-tags--small" aria-label="Tecnologias">
-              <li>WordPress</li>
-              <li>PHP</li>
-              <li>ACF</li>
-            </ul>
-            <div class="wc-other__links">
-                <a href="https://www.gesstorha.com.br/" target="_blank" rel="noopener">Ver site<span class="visually-hidden">: Gesstorha</span> <span
-                    aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
-            </div>
-          </li>
-          <li class="wc-other">
-            <div class="wc-other__info">
-              <h4 class="wc-other__name">Meu Segredo Pro · L'Oréal</h4>
-              <p class="wc-other__kind">Landing page</p>
-            </div>
-            <p class="wc-other__desc">Página de apresentação da plataforma Meu Segredo Pro, da L'Oréal.</p>
-            <ul class="wc-tags wc-tags--small" aria-label="Tecnologias">
-              <li>Pug</li>
-              <li>Sass</li>
-              <li>JavaScript</li>
-            </ul>
-            <div class="wc-other__links">
-                <a href="https://thealfred.com.br/enext/meu-segredo/" target="_blank" rel="noopener">Ver página<span class="visually-hidden">: Meu Segredo Pro · L'Oréal</span> <span
-                    aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Landing pages · Campanha</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="./projetos/kerastase/">Kérastase Paris</a></h3>
+              <p class="wc-case-card__desc">Landing pages de lançamento, com destaque para a Curl Manifesto: cadastro de profissionais de salão integrado ao CRM da marca.</p>
+                <p class="wc-case-card__partner">Em parceria com The Alfred (Série //A Digital)</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>Pug</li>
+                  <li>Sass</li>
+                  <li>JavaScript</li>
+                  <li>Gulp</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver case <span aria-hidden="true">→</span></span>
+              </div>
             </div>
           </li>
-          <li class="wc-other">
-            <div class="wc-other__info">
-              <h4 class="wc-other__name">IDA · Future Friday 2023</h4>
-              <p class="wc-other__kind">Landing page · Campanha</p>
+          <li class="wc-case-card">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/soulhara-desktop-640.webp"
+                srcset="./assets/img/cases/soulhara-desktop-640.webp 640w, ./assets/img/cases/soulhara-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
             </div>
-            <p class="wc-other__desc">Formulário e contagem regressiva para a Black Friday antecipada.</p>
-            <ul class="wc-tags wc-tags--small" aria-label="Tecnologias">
-              <li>Pug</li>
-              <li>Sass</li>
-              <li>JavaScript</li>
-            </ul>
-            <div class="wc-other__links">
-                <a href="https://github.com/Wev-at2/lp_ida_blackfriday-20231025" target="_blank" rel="noopener">Código<span class="visually-hidden">: IDA · Future Friday 2023</span> <span
-                    aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
-                <a href="https://wev-at2.github.io/lp_ida_blackfriday-20231025/" target="_blank" rel="noopener">Ver página<span class="visually-hidden">: IDA · Future Friday 2023</span> <span
-                    aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">E-commerce · Shopify</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="./projetos/soul-hara/">Soul Hara</a></h3>
+              <p class="wc-case-card__desc">Loja de moda amazônica autoral com tema customizado em Liquid, experiência de compra otimizada e SEO de produto.</p>
+                <p class="wc-case-card__partner">Em parceria com Volúpia Digital</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>Shopify</li>
+                  <li>Liquid</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver case <span aria-hidden="true">→</span></span>
+              </div>
             </div>
           </li>
-          <li class="wc-other">
-            <div class="wc-other__info">
-              <h4 class="wc-other__name">Kaiany Massera</h4>
-              <p class="wc-other__kind">Protótipo · Figma</p>
+          <li class="wc-case-card">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/gesstorha-desktop-640.webp"
+                srcset="./assets/img/cases/gesstorha-desktop-640.webp 640w, ./assets/img/cases/gesstorha-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
             </div>
-            <p class="wc-other__desc">UI e protótipo responsivo de site para terapeuta.</p>
-            <ul class="wc-tags wc-tags--small" aria-label="Tecnologias">
-              <li>Figma</li>
-              <li>UI Design</li>
-            </ul>
-            <div class="wc-other__links">
-                <a href="https://www.figma.com/community/file/1487888323341957426" target="_blank" rel="noopener">Ver protótipo<span class="visually-hidden">: Kaiany Massera</span> <span
-                    aria-hidden="true">↗</span><span class="visually-hidden"> (abre em nova aba)</span></a>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Site institucional · WordPress</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="https://www.gesstorha.com.br/" target="_blank" rel="noopener">Gesstorha<span class="visually-hidden"> (abre em nova aba)</span></a></h3>
+              <p class="wc-case-card__desc">Site institucional em WordPress com PHP e ACF, moderno, responsivo e otimizado para SEO.</p>
+                <p class="wc-case-card__partner">Em parceria com Volúpia Digital</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>WordPress</li>
+                  <li>PHP</li>
+                  <li>ACF</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver site <span aria-hidden="true">↗</span></span>
+              </div>
+            </div>
+          </li>
+          <li class="wc-case-card">
+            <div class="wc-case-card__media">
+              <img src="./assets/img/cases/segredo-desktop-640.webp"
+                srcset="./assets/img/cases/segredo-desktop-640.webp 640w, ./assets/img/cases/segredo-desktop.webp 1200w"
+                sizes="(max-width: 767px) 90vw, 40vw" alt="" width="1200" height="750" loading="lazy" decoding="async">
+            </div>
+            <div class="wc-case-card__body">
+              <p class="wc-eyebrow">Landing page</p>
+              <h3 class="wc-case-card__title"><a class="wc-case-card__link" href="https://thealfred.com.br/enext/meu-segredo/" target="_blank" rel="noopener">Meu Segredo Pro · L'Oréal<span class="visually-hidden"> (abre em nova aba)</span></a></h3>
+              <p class="wc-case-card__desc">Página de apresentação da plataforma Meu Segredo Pro, de L'Oréal Produtos Profissionais.</p>
+                <p class="wc-case-card__partner">Em parceria com The Alfred (Série //A Digital)</p>
+              <ul class="wc-tags" aria-label="Tecnologias">
+                  <li>Pug</li>
+                  <li>Sass</li>
+                  <li>JavaScript</li>
+              </ul>
+              <div class="wc-case-card__actions">
+                <span class="wc-case-card__cta" aria-hidden="true">Ver página <span aria-hidden="true">↗</span></span>
+              </div>
             </div>
           </li>
         </ul>
@@ -517,7 +524,7 @@
               <summary>
                 <h3>Desenvolvedor Front-end</h3>
                 <h4>
-                  The Alfred Digital | Série A Digital
+                  The Alfred Digital | Série //A Digital
                   <br>
                   <span>Abr/2022 - Ago/2023</span>
                 </h4>
@@ -537,23 +544,31 @@
 
     <section id="wc-about" class="wc-about">
       <div class="wc-about__content container">
-        <p class="wc-eyebrow">Quem sou</p>
-        <h2 class="wc-about__title">Sobre mim</h2>
-        <p class="wc-about__description">
-          Comecei no front-end construindo landing pages e e-commerces para marcas como <strong>Kérastase</strong> e
-          <strong>Hausport</strong>, e logo entendi que um bom site não depende só do código nem só do design: depende
-          dos dois falando a mesma língua.
-        </p>
-        <p class="wc-about__description">
-          Hoje atuo nesse meio-campo. Prototipo no <strong>Figma</strong>, desenvolvo com <strong>HTML, CSS/Sass,
-          JavaScript e PHP</strong> e publico em plataformas como <strong>WordPress, Shopify e VTEX</strong>, sempre de
-          olho no que o usuário não vê mas sente: velocidade, acessibilidade e consistência entre telas.
-        </p>
-        <p class="wc-about__description">
-          Atualmente sou <strong>Analista Front-end no Grupo Ideal Trends</strong>, onde desenvolvo e mantenho sites e
-          landing pages em PHP. Fora do expediente, estudo Product Design e Design Systems, porque acredito que o melhor
-          front-end é aquele que entende <em>por que</em> cada pixel está ali.
-        </p>
+        <figure class="wc-about__photo">
+          <img src="./assets/img/wc-profile-20260206-1.webp"
+            srcset="./assets/img/wc-profile-20260206-1-480.webp 480w, ./assets/img/wc-profile-20260206-1.webp 800w"
+            sizes="(max-width: 767px) 70vw, 28vw" alt="Foto de Weverton Costa, Desenvolvedor Front-end e UI Designer"
+            width="800" height="800" loading="lazy" decoding="async">
+        </figure>
+        <div class="wc-about__text">
+          <p class="wc-eyebrow">Quem sou</p>
+          <h2 class="wc-about__title">Sobre mim</h2>
+          <p class="wc-about__description">
+            Comecei no front-end construindo landing pages e e-commerces para marcas como <strong>Kérastase</strong> e
+            <strong>Hausport</strong>, e logo entendi que um bom site não depende só do código nem só do design: depende
+            dos dois falando a mesma língua.
+          </p>
+          <p class="wc-about__description">
+            Hoje atuo nesse meio-campo. Prototipo no <strong>Figma</strong>, desenvolvo com <strong>HTML, CSS/Sass,
+            JavaScript e PHP</strong> e publico em plataformas como <strong>WordPress, Shopify e VTEX</strong>, sempre de
+            olho no que o usuário não vê mas sente: velocidade, acessibilidade e consistência entre telas.
+          </p>
+          <p class="wc-about__description">
+            Atualmente sou <strong>Analista Front-end no Grupo Ideal Trends</strong>, onde desenvolvo e mantenho sites e
+            landing pages em PHP. Fora do expediente, estudo Product Design e Design Systems, porque acredito que o melhor
+            front-end é aquele que entende <em>por que</em> cada pixel está ali.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -629,10 +644,6 @@
       </ul>
     </div>
   </footer>
-
-  <script>
-    fetch('https://notifica-site.onrender.com/track-visit');
-  </script>
 </body>
 
 </html>
