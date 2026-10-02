@@ -36,11 +36,15 @@
 }
 @font-face {
   font-family: "Monument Extended Regular";
-  src: url("../fonts/MonumentExtended-Regular.otf");
+  src: url("../fonts/MonumentExtended-Regular.woff2") format("woff2"),
+    url("../fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Monument Extended Ultrabold";
-  src: url("../fonts/MonumentExtended-Ultrabold.otf");
+  src: url("../fonts/MonumentExtended-Ultrabold.woff2") format("woff2"),
+    url("../fonts/MonumentExtended-Ultrabold.otf") format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Glacial Indifference", sans-serif;
@@ -119,44 +123,34 @@ input[type="submit"]:hover {
   cursor: url("/assets/svg/wcursor.svg") 5 0, pointer;
 }
 .wc-body {
-  background-color: var(--main-bg-color);
   position: relative;
-  background: var(--color-radial-gradient-1);
-  background-attachment: fixed;
-  background-size: 200vw 200vw;
-  background-position: 0% 50%;
-  background-repeat: repeat;
-  animation: bg-slide 7s infinite alternate ease-in-out; 
+  background-color: var(--main-bg-color);
   box-sizing: border-box;
-  transition: var(transition-1s);
 }
-@keyframes bg-slide {
-  0% {
-      background-size: 200vw 200vw;
-      background-position: -10% 60%;
-  }
-  100% {
-      background-size: 200vw 200vw;
-      background-position: 110% 40%;
-  }
+/* Brilho azul que passeia pelo fundo. Anima só transform, que roda na GPU sem repintar a página */
+.wc-body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200vmax;
+  height: 200vmax;
+  margin: -100vmax 0 0 -100vmax;
+  background: var(--color-radial-gradient-1);
+  pointer-events: none;
+  z-index: -1;
+  animation: bg-glide 7s infinite alternate ease-in-out;
+  will-change: transform;
 }
-@media screen and (max-width: 767px) {
-  .wc-body {
-    background-size: 200vh 200vh !important;
-    /* background-position: 20% 50% !important; */
-    /* animation: bg-slide 7s infinite alternate ease-in-out !important; */
+@keyframes bg-glide {
+  from {
+    transform: translate(-60vw, 10vh);
   }
-  @keyframes bg-slide {
-    0% {
-     background-size: 200dvh 200dvh;
-        background-position: 30% 40%;
-    }
-    100% {
-       background-size: 200vh 200vh;;
-      background-position: 60% 70%;
-    }
+  to {
+    transform: translate(60vw, -10vh);
   }
 }
+
 /* //// ACESSIBILIDADE //// */
 html {
   scroll-padding-top: 5rem;

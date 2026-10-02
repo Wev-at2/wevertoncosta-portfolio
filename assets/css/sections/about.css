@@ -1,21 +1,17 @@
 .wc-about {
     margin: 0;
-    padding: 0 0 7rem;
-    /* background: var(--color-linear-gradient-2); */
-}
-
-.wc-about__content {
-    height: 70vh;
-    overflow: hidden;
+    padding: 0 0 4rem;
     position: relative;
 }
 
-.wc-about__content::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
+.wc-about__content {
+    max-width: 80%;
+}
+
+.wc-about__description {
+    max-width: 68ch;
+    font-size: var(--font-size-base);
+    color: var(--color-gray-1);
 }
 
 .wc-about__description strong,
@@ -28,55 +24,18 @@
     text-decoration: underline;
 }
 
-.wc-about button#read-button {
-    background: transparent;
-    border: none;
-    font-size: var(font-size-subtitle);
-    font-weight: 700;
-    color: var(--color-golden-1);
-}
-
 @media only screen and (min-width: 767px) {
-    .wc-about {
-        position: relative;
-    }
-
     .wc-about::before {
         content: "";
         background: url("../../img/wc-about-bg2.webp") no-repeat top right;
-        filter: contrast(1.5) brightness(0.5) drop-shadow(5px 10px 5px black);
-        opacity: 0.5;
+        filter: contrast(1.5) brightness(0.5);
+        opacity: 0.35;
         pointer-events: none;
         position: absolute;
         inset: 0;
     }
 
-    #read-button {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .wc-about::before {
-        background-position: top;
-    }
-
-    .wc-about__description {
-        text-align: justify;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    #read-button {
-        display: block;
-        padding: 1rem 0;
-        cursor: pointer;
-        transition: var(--transition);
-    }
-
-    #read-button:is(:hover, :focus, :focus-visible) {
-        transform: scale(1.1);
+    .wc-about__content {
+        position: relative;
     }
 }

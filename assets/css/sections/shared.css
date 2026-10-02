@@ -1,0 +1,38 @@
+/* //// COMPONENTES COMPARTILHADOS //// */
+
+.wc-eyebrow {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-small);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gray-4);
+    margin-bottom: 0.5rem;
+}
+
+section h2 + * {
+    margin-top: 0;
+}
+
+.wc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.wc-tags li {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-small);
+    line-height: 1;
+    color: var(--color-gray-2);
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--color-white-transparency-2);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    white-space: nowrap;
+}
+
+.wc-tags--small li {
+    font-size: var(--font-size-smaller);
+    padding: 0.35rem 0.55rem;
+}

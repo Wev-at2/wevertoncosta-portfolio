@@ -21,7 +21,7 @@ export function revealSectionsOnScroll() {
 
 export function projectCardTilt() {
   if (prefersReducedMotion) return;
-  const cards = document.querySelectorAll('.wc-projects__item');
+  const cards = document.querySelectorAll('.wc-case-card');
 
   cards.forEach((card) => {
     card.addEventListener('mousemove', (event) => {
@@ -29,8 +29,8 @@ export function projectCardTilt() {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
-      const rotateY = ((x / rect.width) - 0.5) * 8;
-      const rotateX = ((y / rect.height) - 0.5) * -8;
+      const rotateY = ((x / rect.width) - 0.5) * 4;
+      const rotateX = ((y / rect.height) - 0.5) * -4;
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
 

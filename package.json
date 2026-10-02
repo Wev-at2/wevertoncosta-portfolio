@@ -1,0 +1,10 @@
+{
+  "name": "wevertoncosta-portfolio",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Portfólio de Weverton Costa, Desenvolvedor Front-end & UI Designer",
+  "type": "module",
+  "scripts": {
+    "build:css": "node scripts/build-css.mjs"
+  }
+}

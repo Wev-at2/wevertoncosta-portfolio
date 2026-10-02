@@ -22,3 +22,18 @@
     gap: 1rem;
   }
 }
+.wc-footer__built {
+  font-size: var(--font-size-small);
+  color: var(--color-gray-3);
+  text-align: center;
+  max-width: 46ch;
+  margin: 0;
+}
+.wc-footer__built a {
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+.wc-footer__built strong {
+  color: var(--secondary-color);
+  white-space: nowrap;
+}

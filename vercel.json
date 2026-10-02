@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/assets/(img|fonts|svg)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/assets/(css|js)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+    }
+  ]
+}

@@ -2,7 +2,6 @@ export function setupMenu() {
   const btnMobile = document.getElementById("btn-mobile");
 
   function toggleMenu(event) {
-    if (event.type === "touchstart") event.preventDefault();
     const headerNav = document.getElementById("header-nav");
     headerNav.classList.toggle("active");
     const active = headerNav.classList.contains("active");
@@ -27,6 +26,6 @@ export function setupMenu() {
     menuItem.addEventListener("click", closeMenuOnOptionSelect);
   });
 
+  // "click" já cobre toque no celular; o touchstart extra bloqueava a rolagem (listener não passivo)
   btnMobile.addEventListener("click", toggleMenu);
-  btnMobile.addEventListener("touchstart", toggleMenu);
 }

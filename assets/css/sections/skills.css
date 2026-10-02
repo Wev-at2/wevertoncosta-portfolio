@@ -1,56 +1,38 @@
-/* .wc-skills {
-    background: var(--color-linear-gradient-2);
-} */
-.wc-skills__items {
+.wc-skill-groups {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-    gap: 2rem 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    list-style: none;
 }
-.wc-skills__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: drop-shadow(6px 6px 2px transparent);
-    filter: drop-shadow(0px 0px 60px var(--color-black));
-    box-sizing: border-box;
-    transition: var(--transition);
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 1rem;
-    padding: 0.9rem 0.35rem;
-    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+
+.wc-skill-group {
+    padding: 1.5rem;
+    border: 1px solid var(--color-white-transparency-2);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    transition: border-color 0.3s ease;
 }
-.wc-skills__item svg {
-    width: 100%;
-    max-width: 4rem;
-    height: auto;
-    filter: drop-shadow(0 0 4px transparent);
-    transition: var(--transition);
+
+.wc-skill-group:hover {
+    border-color: var(--color-white-transparency);
 }
-.wc-skills__item:is(:hover, :focus, :focus-visible) svg {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 8px var(--color-white-transparency-2));
-}
-.wc-skills__item:is(:hover, :focus, :focus-visible) {
-    border-color: var(--color-white-transparency-2);
-    transform: translateY(-4px);
-}
-#wc-skills__css svg use {
-    fill: #663399;
-}
-.wc-skills__item--text {
+
+.wc-skill-group__title {
     font-family: var(--font-family-title);
-    font-size: var(--font-size-small);
-    text-align: center;
-    margin-top: 1rem;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-lighter);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
-@media only screen and (max-width: 767px) {
-    .wc-skills__items {
-        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
-        gap: 2rem 0;
-        filter: drop-shadow(0px 0px 0px transparent);
+
+@media only screen and (max-width: 1023px) {
+    .wc-skill-groups {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .wc-skills__item--text {
-        font-size: var(--font-size-small);
+}
+
+@media only screen and (max-width: 767px) {
+    .wc-skill-groups {
+        grid-template-columns: 1fr;
     }
 }

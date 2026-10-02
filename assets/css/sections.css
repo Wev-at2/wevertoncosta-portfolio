@@ -3,6 +3,9 @@
 @import url(./sections/experience.css);
 @import url(./sections/projects.css);
 @import url(./sections/contact.css);
+@import url(./sections/brands.css);
+@import url(./sections/process.css);
+@import url(./sections/shared.css);
 
 section {
     font-family: var(--font-family-base);
@@ -10,7 +13,6 @@ section {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
-    filter: drop-shadow(5px 10px 5px black) ; 
     scroll-margin-top: 6rem;
 }
 section .container {
@@ -28,18 +30,6 @@ section h2 {
 section p {
     line-height: 1.5;
     margin-bottom: 1rem;
-}
-
-@media only screen and (min-width: 1024px) {
-    .wc-main {
-        scroll-snap-type: y mandatory;
-    }
-
-    .wc-main > section {
-        min-height: 100vh;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-    }
 }
 
 .reveal-on-scroll {
