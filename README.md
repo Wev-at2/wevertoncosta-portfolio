@@ -25,7 +25,7 @@ Portfólio de **Weverton Costa**, Desenvolvedor Front-end & UI Designer em São 
 
 ```
 ├── index.html               # Home
-├── projetos/<slug>/         # Cases: Wisionary Lab, ANAC, W.E.R., Kérastase e Soul Hara
+├── projetos/<slug>/         # Cases: Wisionary Lab, ANAC, W.E.R., Village, Kérastase e Soul Hara
 ├── assets/
 │   ├── css/                 # Fontes do CSS, organizadas por seção (BEM)
 │   │   ├── style.css        # Entrada da home (só @imports)

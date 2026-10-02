@@ -4,14 +4,13 @@
 .wc-header__logo--link {
   color: var(--secondary-color);
   text-decoration: none;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 .wc-header__logo--link:is(:hover, :focus) {
   transform: scale(1.1);
-  transition: all 0.4s ease;
 }
 .wc-header__logo--text {
   transition: all 0.4s ease;
