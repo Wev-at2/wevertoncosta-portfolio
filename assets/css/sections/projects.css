@@ -79,8 +79,8 @@ h3.wc-projects__item-subtitle,
     padding: 0 1rem;
 }
 
-ul.wc-projects__item--links,
-ul.wc-projects__item--links a {
+.wc-projects__item--links,
+.wc-projects__item--links a {
     padding: 1rem;
 }
 
@@ -126,13 +126,15 @@ ul.wc-projects__item--links a {
     align-items: center;
     gap: 0.8rem;
 }
+
 .wc-projects__item--skills_item img {
     width: 1.5rem;
     height: 1.5rem;
     max-width: 1.5rem;
     max-height: 1.5rem;
-    display: inline-block!important;
+    display: inline-block !important;
 }
+
 .wc-projects__item--skills_item svg use,
 .wc-projects__item--skills_item svg use path,
 .wc-projects__item--skills_item svg g {
@@ -249,7 +251,7 @@ ul.wc-projects__item--links a {
         font-size: 0.625rem;
     }
 
-    ul.wc-projects__item--links {
+    .wc-projects__item--links {
         flex-wrap: wrap;
         margin: 0;
         padding-top: 0;
