@@ -271,3 +271,64 @@
         animation: bg 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
     }
 }
+/* //// HERO: AÇÕES //// */
+.wc-main__banner--content_actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+}
+
+.wc-main__banner--content_secondary {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-medium);
+    letter-spacing: 0.07em;
+    color: var(--secondary-color);
+    padding: 0.5em 0;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.wc-main__banner--content_secondary:is(:hover, :focus-visible) {
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Compensa o deslocamento do texto do CTA animado (.text com translate de 0.7em) */
+@media only screen and (min-width: 767px) {
+    .wc-main__banner--content_secondary {
+        transform: translateY(0.45em);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .wc-main__banner--content_actions {
+        justify-content: center;
+    }
+}
+
+/* Mobile: o conteúdo do hero deixa de ser absoluto para não vazar sobre a seção seguinte */
+@media only screen and (max-width: 767px) {
+    .wc-main__banner--container {
+        display: grid;
+    }
+
+    .wc-main__banner--container>picture,
+    .wc-main__banner--content {
+        grid-area: 1 / 1;
+    }
+
+    .wc-main__banner--img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .wc-main__banner--content {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        padding: 7rem 10% 3rem;
+        box-sizing: border-box;
+    }
+}

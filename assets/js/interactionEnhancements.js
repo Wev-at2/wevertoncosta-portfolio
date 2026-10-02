@@ -1,6 +1,9 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 export function revealSectionsOnScroll() {
-  const items = document.querySelectorAll('.wc-main > section');
-  if (!items.length) return;
+  // O hero fica de fora para não atrasar o LCP
+  const items = document.querySelectorAll('.wc-main > section:not(.wc-main__banner)');
+  if (!items.length || prefersReducedMotion || !('IntersectionObserver' in window)) return;
 
   items.forEach((item) => item.classList.add('reveal-on-scroll'));
 
@@ -8,14 +11,16 @@ export function revealSectionsOnScroll() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
   items.forEach((item) => observer.observe(item));
 }
 
 export function projectCardTilt() {
+  if (prefersReducedMotion) return;
   const cards = document.querySelectorAll('.wc-projects__item');
 
   cards.forEach((card) => {

@@ -1,44 +1,26 @@
+// Header fixo após 100px de rolagem.
+// A rolagem suave das âncoras fica no CSS (scroll-behavior), respeitando prefers-reduced-motion.
 export function menuScroll() {
-    $(document).ready(function () {
-        $('a[href^="#"]').on("click", function (e) {
-            e.preventDefault();
+    const sticky = document.querySelector(".sticky");
+    if (!sticky) return;
 
-            var target = this.hash;
-            var $target = $(target);
+    let ticking = false;
 
-            if ($target.length) {
-                $("html, body")
-                    .stop()
-                    .animate(
-                        {
-                            scrollTop: $target.offset().top,
-                        },
-                        900,
-                        "swing",
-                        function () {
-                            window.location.hash = target;
-                        }
-                    );
+    function updateHeader() {
+        sticky.classList.toggle("fixed", window.scrollY >= 100);
+        ticking = false;
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeader);
+                ticking = true;
             }
-        });
-    });
+        },
+        { passive: true }
+    );
 
-    $(".scroll").on("click", function (e) {
-        e.preventDefault();
-        var hash = this.hash;
-        $("html, body").animate(
-            {
-                scrollTop: $(hash).offset().top,
-            },
-            1000
-        );
-    });
-
-    $(window).scroll(function () {
-        var sticky = $(".sticky"),
-            scroll = $(window).scrollTop();
-
-        if (scroll >= 100) sticky.addClass("fixed");
-        else sticky.removeClass("fixed");
-    });
+    updateHeader();
 }
