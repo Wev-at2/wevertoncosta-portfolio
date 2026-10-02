@@ -3,1129 +3,561 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Weverton Costa | Front-end Developer & UI Designer</title>
-
+  <title>Weverton Costa | Front-end & Creative Developer</title>
   <meta name="description"
-    content="Olá, eu sou Weverton Costa, desenvolvedor front-end e UX/UI Designer. Transformo ideias em interfaces intuitivas e experiências envolventes. Explore meu portfólio e descubra projetos inovadores e soluções criativas para o universo web.">
-  <meta name="keywords"
-    content="Web Designer São Paulo, Front-end São Paulo, Front-end development, Web Designer, Web development portfolio, Website optimization, Desenvolvimento Web, Desenvolvedor Frontend, Desenvolvimento Web Moderno, Desenvolvedor de sites, Programador front-end Embu das Artes, Programador Web São Paulo, SEO, Performance Web, Web design, UI, User interface, UX/UI design, Responsive Design, Prototipagem Rápida, Vtex, Vtex IO, Olist Vnda, HTML5, HTML, CSS3, CSS, JavaScript, Portfólio, Projetos, Criatividade, Freelancer">
+    content="Weverton Costa — Front-end e Creative Developer. Sites, e-commerces e experiências interativas (WordPress, VTEX, Shopify, Three.js) onde performance, design e lógica de negócio trabalham juntos.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Weverton Costa">
-  <meta name="publisher" content="Weverton Costa">
-  <meta name="referrer" content="no-referrer-when-downgrade">
-  <meta name="theme-color" content="#0e1e5b">
+  <meta name="theme-color" content="#07080b">
 
-  <!-- Favicons -->
   <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://wevertoncosta.dev.br">
+  <link rel="canonical" href="https://wevertoncosta.dev.br/">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wevertoncosta.dev.br">
-  <meta property="og:title" content="Weverton Costa | Desenvolvedor Front-End e UX/UI Designer">
+  <meta property="og:url" content="https://wevertoncosta.dev.br/">
+  <meta property="og:title" content="Weverton Costa | Front-end & Creative Developer">
   <meta property="og:description"
-    content="Transformo ideias em interfaces intuitivas e experiências envolventes. Explore meu portfólio.">
+    content="Interfaces que decidem antes do clique. Sites, e-commerces e experiências 3D com performance de produção.">
   <meta property="og:image" content="https://wevertoncosta.dev.br/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Weverton Costa",
+    "jobTitle": "Front-end & Creative Developer",
+    "url": "https://wevertoncosta.dev.br/",
+    "image": "https://wevertoncosta.dev.br/assets/img/wc-profile-2026-720.webp",
+    "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressCountry": "BR" },
+    "knowsAbout": ["Front-end Development", "WordPress", "PHP", "Three.js", "JavaScript", "VTEX", "Shopify", "Olist Vnda", "UI Design", "SEO técnico"],
+    "sameAs": ["https://github.com/Wev-at2", "https://www.linkedin.com/in/weverton-costa/", "https://instagram.com/Wev_at2"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" />
-  <link rel="stylesheet" href="./assets/css/style.css">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="preload" href="./assets/fonts/MonumentExtended-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="./assets/css/v2/portfolio.css">
 
-  <script src="./assets/js/main.js" type="module" defer></script>
+  <script src="./assets/js/v2/app.js" type="module"></script>
 </head>
 
-<body class="wc-body">
-  <header class="wc-header sticky">
-    <div class="wc-header__logo">
-      <a href="" class="wc-header__logo--link">
-        <svg width="50" height="50" viewBox="0 0 1800 1800" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill="none" stroke="white" stroke-width="50" fill-rule="evenodd" clip-rule="evenodd"
-            d="M900 0L400 1350L200 700H0L400 1800L554.526 1398.23C551.548 1416.39 550 1435.03 550 1454.02C550 1645.1 706.7 1800 900 1800C1093.3 1800 1250 1645.1 1250 1454.02C1250 1435.03 1248.45 1416.39 1245.47 1398.23L1400 1800L1800 700H1600L1400 1350L900 0ZM1195.72 1268.87L900 500L604.282 1268.87C653.507 1192.2 732.403 1135.98 825 1116V1218.2C723.572 1249.69 650 1343.36 650 1454.02C650 1590.5 761.929 1701.15 900 1701.15C1038.07 1701.15 1150 1590.5 1150 1454.02C1150 1343.36 1076.43 1249.69 975 1218.2V1116C1067.6 1135.98 1146.49 1192.2 1195.72 1268.87Z"
-            class="dsrRBUzm_0" />
-        </svg>
-        <span class="wc-header__logo--text" style="font-size:1.2rem;font-weight:bold;">
-          Weverton Costa
-          <span style="position: absolute; left: -9999px;">
-            Desenvolvedor Front-End &amp; UI Designer
-          </span>
-        </span>
-      </a>
-    </div>
-    <div class="wc-header__menu">
-      <nav aria-label="Main Menu" class="wc-header__menu--nav wc-header__menu--nav_mobile js-menu" id="header-nav">
-        <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-          menu<span id="hamburguer"></span>
-        </button>
-        <ul class="wc-header__menu--nav_items" role="menu">
-          <li class="wc-header__menu--nav_item" role="menuitem"><a href="#wc-main-home">Início</a></li>
-          <li class="wc-header__menu--nav_item" role="menuitem"><a href="#wc-about">Sobre mim</a></li>
-          <li class="wc-header__menu--nav_item" role="menuitem"><a href="#wc-skills">Habilidades</a></li>
-          <li class="wc-header__menu--nav_item" role="menuitem"><a href="#wc-projects">Projetos</a></li>
-          <li class="wc-header__menu--nav_item" role="menuitem"><a href="#wc-experience">Experiências</a></li>
-          <li class="wc-header__menu--nav_item" role="menuitem"><a href="#wc-contact">Contato</a></li>
-        </ul>
-      </nav>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"><span class="cursor__label"></span></span>
+  </div>
 
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="#top" class="brand" aria-label="Weverton Costa — início">
+        <svg viewBox="0 0 1800 1800" fill="none" aria-hidden="true">
+          <path stroke-width="60" fill-rule="evenodd" clip-rule="evenodd"
+            d="M900 0L400 1350L200 700H0L400 1800L554.526 1398.23C551.548 1416.39 550 1435.03 550 1454.02C550 1645.1 706.7 1800 900 1800C1093.3 1800 1250 1645.1 1250 1454.02C1250 1435.03 1248.45 1416.39 1245.47 1398.23L1400 1800L1800 700H1600L1400 1350L900 0ZM1195.72 1268.87L900 500L604.282 1268.87C653.507 1192.2 732.403 1135.98 825 1116V1218.2C723.572 1249.69 650 1343.36 650 1454.02C650 1590.5 761.929 1701.15 900 1701.15C1038.07 1701.15 1150 1590.5 1150 1454.02C1150 1343.36 1076.43 1249.69 975 1218.2V1116C1067.6 1135.98 1146.49 1192.2 1195.72 1268.87Z" />
+        </svg>
+        <span>Weverton Costa</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+          <span class="nav__toggle-text">Menu</span>
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <div class="nav__panel" id="nav-panel">
+          <ul class="nav__list">
+            <li><a href="#work" data-scramble>Cases</a></li>
+            <li><a href="#capabilities" data-scramble>Capacidades</a></li>
+            <li><a href="#process" data-scramble>Processo</a></li>
+            <li><a href="#experience" data-scramble>Experiência</a></li>
+            <li><a href="#about" data-scramble>Sobre</a></li>
+          </ul>
+          <span class="nav__clock" data-clock aria-hidden="true">SP --:-- GMT-3</span>
+          <div class="nav__cta">
+            <a class="btn btn--primary" href="#contact" data-magnetic="0.25">Vamos conversar</a>
+          </div>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <main class="wc-main">
-    <section id="wc-main-home" class="wc-main__banner">
-      <div class="wc-main__banner--container">
-        <picture>
-          <source media="(min-width: 769px)" srcset="./assets/img/wc.mainHome-BG-2-1.webp">
-          <source media="(max-width: 768px)" srcset="./assets/img/wc.mainHome-BG-9-16.webp">
-          <img class="wc-main__banner--img" src="./assets/img/wc.mainHome-BG-2-1.webp" alt=""
-            style="display: block; max-width: 100%; height: auto;">
-        </picture>
-        <div class="wc-main__banner--content">
-          <div class="wc-main__banner--content_text">
-            <h1 class="wc-main__banner--content_h1" style="position:absolute;left:-9999px;">
-              Weverton Costa - Desenvolvedor Front-End &amp; UI Designer
-            </h1>
-            <h2 class="wc-main__banner--content_title">Design + Código com foco em resultado</h2>
-            <p class="wc-main__banner--content_description typewriter">
-              Sou Weverton Costa, Front-end Developer e UI Designer. Crio experiências rápidas, acessíveis e com alto
-              impacto para marcas e produtos digitais.
+  <main id="main">
+    <!-- 01 · HERO — posicionamento + prova + ação em uma única dobra -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__canvas" data-hero-scene aria-hidden="true"></div>
+      <div class="wrap hero__grid">
+        <p class="eyebrow eyebrow--live" data-reveal>Front-end &amp; Creative Developer · São Paulo, BR</p>
+
+        <h1 class="display hero__title" id="hero-title" data-split>
+          Interfaces que decidem <em>antes do clique.</em>
+        </h1>
+
+        <div class="hero__bottom">
+          <div class="hero__lead" data-reveal style="--delay: .25s">
+            <p class="lead">
+              Sou Weverton Costa. Construo sites, e-commerces e experiências interativas em que
+              <strong>performance, design e lógica de negócio</strong> trabalham juntos, de WordPress sob medida
+              a cenas 3D com Three.js que não sacrificam o Core Web Vitals.
             </p>
-            <a class="wc-main__banner--content_link" href="#wc-about">
-              <span class="text">Ver minha trajetória</span>
-              <span class="line -right"></span>
-              <span class="line -top"></span>
-              <span class="line -left"></span>
-              <span class="line -bottom"></span>
+          </div>
+          <div class="hero__actions" data-reveal style="--delay: .35s">
+            <a class="btn btn--primary" href="./cases/wisionary-lab/" data-magnetic>
+              Ver case Wisionary Lab <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn" href="#contact" data-magnetic>Falar comigo</a>
+          </div>
+        </div>
+
+        <ul class="hero__meta" data-reveal style="--delay: .45s">
+          <li><b>4+ anos</b> em produção</li>
+          <li>L'Oréal · Kérastase · Hausport · IDA</li>
+          <li>WordPress · VTEX · Shopify · Olist Vnda</li>
+          <li>Three.js · JS ES6+ · Sass</li>
+        </ul>
+      </div>
+      <span class="hero__scroll" aria-hidden="true">Scroll ↓</span>
+    </section>
+
+    <!-- Prova social contínua -->
+    <div class="marquee" aria-label="Marcas e plataformas com que já trabalhei">
+      <div class="marquee__track">
+        <span class="marquee__item">Wisionary Lab</span>
+        <span class="marquee__item">Kérastase Paris</span>
+        <span class="marquee__item">L'Oréal</span>
+        <span class="marquee__item">Hausport</span>
+        <span class="marquee__item">IDA</span>
+        <span class="marquee__item">W.E.R. Engenharia</span>
+        <span class="marquee__item">ANAC</span>
+        <span class="marquee__item">The Alfred</span>
+        <span class="marquee__item" aria-hidden="true">Wisionary Lab</span>
+        <span class="marquee__item" aria-hidden="true">Kérastase Paris</span>
+        <span class="marquee__item" aria-hidden="true">L'Oréal</span>
+        <span class="marquee__item" aria-hidden="true">Hausport</span>
+        <span class="marquee__item" aria-hidden="true">IDA</span>
+        <span class="marquee__item" aria-hidden="true">W.E.R. Engenharia</span>
+        <span class="marquee__item" aria-hidden="true">ANAC</span>
+        <span class="marquee__item" aria-hidden="true">The Alfred</span>
+      </div>
+    </div>
+
+    <!-- 02 · CASES -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section__index">01 / Cases selecionados</p>
+            <h2 class="section-title" id="work-title" data-split>Trabalho que vira canal de aquisição.</h2>
+          </div>
+          <p class="lead" data-reveal>
+            Cada projeto abaixo começou com uma pergunta de negócio, não com um layout. Comece pelo case em destaque:
+            ele resume como eu penso engenharia e design juntos.
+          </p>
+        </div>
+
+        <article class="feature" data-reveal>
+          <a class="feature__media" href="./cases/wisionary-lab/" data-cursor="Ler case" aria-label="Ler o case Wisionary Lab">
+            <div class="cover-wisionary" aria-hidden="true">
+              <div class="cover-wisionary__top"><span>wisionarylab.com</span><span>2026</span></div>
+              <span class="cover-wisionary__orb"></span>
+              <p class="cover-wisionary__title">Presença<br>com <span>estratégia.</span></p>
+              <div class="cover-wisionary__bottom"><span>WordPress · Three.js</span><span>Case 01</span></div>
+            </div>
+            <!-- Substitua pelo screenshot real; se o arquivo não existir, a capa em CSS acima permanece. -->
+            <img src="./assets/img/wc-projects_wisionarylab.webp" alt="" loading="lazy" onerror="this.remove()">
+          </a>
+          <div class="feature__body">
+            <div class="chips">
+              <span class="chip chip--gold">Case em destaque</span>
+              <span class="chip">WordPress / PHP</span>
+              <span class="chip">Three.js</span>
+              <span class="chip">JS ES6+</span>
+              <span class="chip">Sass</span>
+            </div>
+            <h3 class="feature__title">Wisionary Lab: o site da agência como prova técnica viva</h3>
+            <dl class="feature__star">
+              <div>
+                <dt>Situação</dt>
+                <dd>Uma agência que vende "presença digital com lógica de negócio" precisava de um site que provasse a tese
+                  em segundos.</dd>
+              </div>
+              <div>
+                <dt>Desafio</dt>
+                <dd>3D interativo, scroll fluido e conteúdo 100% gerenciável sem abrir mão de performance para SEO e
+                  conversão.</dd>
+              </div>
+              <div>
+                <dt>Ação</dt>
+                <dd>Tema WordPress sob medida, Three.js carregado sob demanda com render loop pausável e CSS mobile-first
+                  orientado a tokens.</dd>
+              </div>
+              <div>
+                <dt>Resultado</dt>
+                <dd>Um site que funciona como vitrine técnica e como funil, levando a um único CTA: o diagnóstico.</dd>
+              </div>
+            </dl>
+            <div class="feature__actions">
+              <a class="btn btn--primary" href="./cases/wisionary-lab/" data-magnetic>
+                Ler o case completo <span class="btn__arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="btn" href="https://wisionarylab.com/" target="_blank" rel="noopener">Site ao vivo</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="work-grid">
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="./assets/img/wc-projects_hausport.webp" alt="E-commerce Hausport" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="card__body">
+              <p class="card__kicker"><span>E-commerce</span><span>Olist Vnda</span></p>
+              <h3 class="card__title">Hausport</h3>
+              <p class="card__text">Front-end completo de e-commerce em Liquid + JS, com The Alfred: templates de catálogo,
+                PDP e checkout alinhados à identidade da marca.</p>
+              <div class="chips"><span class="chip">Liquid</span><span class="chip">Sass</span><span class="chip">JS</span></div>
+              <div class="card__links" data-cursor="Abrir">
+                <a href="https://www.hausport.com.br" target="_blank" rel="noopener">Ver site ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal style="--delay: .08s">
+            <div class="card__media">
+              <img src="./assets/img/wc-projects_kerastase.webp" alt="Landing page Kérastase Blond Action" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="card__body">
+              <p class="card__kicker"><span>Landing page</span><span>L'Oréal Group</span></p>
+              <h3 class="card__title">Kérastase · Blond Action</h3>
+              <p class="card__text">Formulário interativo de diagnóstico capilar que recomenda produtos, construído em Pug +
+                Sass para a linha Blond Action.</p>
+              <div class="chips"><span class="chip">Pug</span><span class="chip">Sass</span><span class="chip">JS</span></div>
+              <div class="card__links" data-cursor="Abrir">
+                <a href="https://cloud.mail.kerastase.com.br/kerastase-paris" target="_blank" rel="noopener">Ver deploy ↗</a>
+                <a href="https://github.com/Wev-at2/loreal-blond-action" target="_blank" rel="noopener">Repositório</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal style="--delay: .16s">
+            <div class="card__media">
+              <img src="./assets/img/wc-projects_kerastase-curl_manifesto.webp" alt="Landing page Kérastase Curl Manifesto" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="card__body">
+              <p class="card__kicker"><span>Landing page</span><span>L'Oréal Group</span></p>
+              <h3 class="card__title">Kérastase · Curl Manifesto</h3>
+              <p class="card__text">Jornada interativa para a linha Curl Manifesto, com captura de lead e recomendação de
+                tratamento profissional.</p>
+              <div class="chips"><span class="chip">Pug</span><span class="chip">Sass</span><span class="chip">JS</span></div>
+              <div class="card__links" data-cursor="Abrir">
+                <a href="https://cloud.mail.kerastase.com.br/tratamento-profissional" target="_blank" rel="noopener">Ver deploy ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="./assets/img/wc-projects_werti.webp" alt="Site W.E.R. Engenharia e Tecnologia" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="card__body">
+              <p class="card__kicker"><span>Institucional</span><span>WordPress</span></p>
+              <h3 class="card__title">W.E.R. Engenharia</h3>
+              <p class="card__text">Redesign completo com ponta a ponta sob minha responsabilidade: projeto, front-end e
+                SEO técnico on-page.</p>
+              <div class="chips"><span class="chip">WordPress</span><span class="chip">PHP</span><span class="chip">SEO</span></div>
+              <div class="card__links" data-cursor="Abrir">
+                <a href="https://www.werti.com.br" target="_blank" rel="noopener">Ver site ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal style="--delay: .08s">
+            <div class="card__media">
+              <img src="./assets/img/wc-projects_anac.webp" alt="Site ANAC Casa do Cardíaco" loading="lazy" width="1200" height="674">
+            </div>
+            <div class="card__body">
+              <p class="card__kicker"><span>Institucional</span><span>WordPress</span></p>
+              <h3 class="card__title">ANAC · Casa do Cardíaco</h3>
+              <p class="card__text">Redesign de site para ONG de saúde: navegação reorganizada, mobile-first e estrutura
+                semântica para busca orgânica.</p>
+              <div class="chips"><span class="chip">WordPress</span><span class="chip">PHP</span><span class="chip">SEO</span></div>
+              <div class="card__links" data-cursor="Abrir">
+                <a href="https://www.anacar.org.br" target="_blank" rel="noopener">Ver site ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal style="--delay: .16s">
+            <div class="card__media">
+              <img src="./assets/img/wc-projects_segredosdesalao.webp" alt="Landing page Meu Segredo Pro" loading="lazy" width="1200" height="750">
+            </div>
+            <div class="card__body">
+              <p class="card__kicker"><span>Landing page</span><span>L'Oréal Group</span></p>
+              <h3 class="card__title">Segredos de Salão · Meu Segredo Pro</h3>
+              <p class="card__text">Página de lançamento da plataforma profissional Meu Segredo Pro, desenvolvida com
+                The Alfred.</p>
+              <div class="chips"><span class="chip">Pug</span><span class="chip">Sass</span><span class="chip">JS</span></div>
+              <div class="card__links" data-cursor="Abrir">
+                <a href="https://thealfred.com.br/enext/meu-segredo/" target="_blank" rel="noopener">Ver deploy ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="labs">
+          <p class="labs__title">Labs &amp; experimentos</p>
+          <div class="labs__row" data-preview="./assets/img/wc-projects_interative_form_deadpool.webp">
+            <span class="labs__name">Deadpool Login</span>
+            <span class="labs__desc">Avatar que reage em tempo real aos campos de e-mail e senha.</span>
+            <a class="labs__go" href="https://wev-at2.github.io/interactive-login-form-deadpool/dist/" target="_blank" rel="noopener">Abrir ↗</a>
+          </div>
+          <div class="labs__row" data-preview="./assets/img/wc-projects_ida-futurefriday.webp">
+            <span class="labs__name">IDA · Future Friday</span>
+            <span class="labs__desc">Landing de Black Friday antecipada com countdown e captura de lead.</span>
+            <a class="labs__go" href="https://wev-at2.github.io/lp_ida_blackfriday-20231025/" target="_blank" rel="noopener">Abrir ↗</a>
+          </div>
+          <div class="labs__row" data-preview="./assets/img/wc-projects_furia.webp">
+            <span class="labs__name">FURIA Store</span>
+            <span class="labs__desc">Landing page construída como teste técnico de processo seletivo.</span>
+            <a class="labs__go" href="https://wev-at2.github.io/seriedesign-testedev/parte1/" target="_blank" rel="noopener">Abrir ↗</a>
+          </div>
+          <div class="labs__row" data-preview="./assets/img/wc-projects_kaianyhipnoterapeuta.webp">
+            <span class="labs__name">Kaiany Massera</span>
+            <span class="labs__desc">Protótipo UX/UI completo no Figma, publicado na comunidade.</span>
+            <a class="labs__go" href="https://www.figma.com/community/file/1487888323341957426" target="_blank" rel="noopener">Abrir ↗</a>
+          </div>
+        </div>
+        <div class="labs__preview" aria-hidden="true"><img src="data:," alt=""></div>
+      </div>
+    </section>
+
+    <!-- 03 · CAPACIDADES -->
+    <section class="section" id="capabilities" aria-labelledby="caps-title">
+      <div class="wrap">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section__index">02 / Capacidades</p>
+            <h2 class="section-title" id="caps-title" data-split>Três disciplinas, uma entrega.</h2>
+          </div>
+          <p class="lead" data-reveal>
+            Não sou "o dev que recebe o layout". Entro na conversa de negócio, desenho a solução e entrego o código que
+            vai para produção.
+          </p>
+        </div>
+
+        <div class="caps" data-reveal>
+          <div class="cap">
+            <span class="cap__num">01</span>
+            <h3 class="cap__title">Engenharia de interface</h3>
+            <p class="cap__text">HTML semântico, CSS orientado a tokens e JavaScript sem dependências desnecessárias.
+              Performance é requisito de projeto, não ajuste de última hora.</p>
+            <div class="chips"><span class="chip">JS ES6+</span><span class="chip">Sass</span><span class="chip">Tailwind</span><span class="chip">A11y</span></div>
+          </div>
+          <div class="cap">
+            <span class="cap__num">02</span>
+            <h3 class="cap__title">CMS &amp; e-commerce</h3>
+            <p class="cap__text">Temas WordPress sob medida em PHP e front-end para VTEX, Shopify e Olist Vnda. O cliente
+              edita o conteúdo sem quebrar o design.</p>
+            <div class="chips"><span class="chip">WordPress</span><span class="chip">PHP</span><span class="chip">VTEX</span><span class="chip">Liquid</span></div>
+          </div>
+          <div class="cap">
+            <span class="cap__num">03</span>
+            <h3 class="cap__title">Creative development</h3>
+            <p class="cap__text">3D em tempo real, scroll narrativo e microinterações que reforçam a mensagem, com
+              fallback e orçamento de performance definidos desde o início.</p>
+            <div class="chips"><span class="chip chip--gold">Three.js</span><span class="chip">WebGL</span><span class="chip">Figma</span><span class="chip">Motion</span></div>
+          </div>
+        </div>
+
+        <div class="stats" data-reveal>
+          <div class="stat"><span class="stat__value"><span data-count="4">0</span><sup>+</sup></span><span class="stat__label">Anos em produção</span></div>
+          <div class="stat"><span class="stat__value"><span data-count="10">0</span><sup>+</sup></span><span class="stat__label">Projetos publicados</span></div>
+          <div class="stat"><span class="stat__value"><span data-count="5">0</span></span><span class="stat__label">Plataformas de e-commerce/CMS</span></div>
+          <div class="stat"><span class="stat__value"><span data-count="3">0</span></span><span class="stat__label">Agências parceiras</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · PROCESSO -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__index">03 / Processo</p>
+          <h2 class="section-title" id="process-title" data-split>Decisão antes de design.</h2>
+        </div>
+        <ol class="process">
+          <li class="step">
+            <span class="step__label">01 · Diagnóstico</span>
+            <h3 class="step__title">Entender o funil</h3>
+            <p class="step__text">Quem visita, o que precisa ver para confiar e qual ação queremos. Sai daqui o
+              objetivo mensurável do projeto.</p>
+          </li>
+          <li class="step">
+            <span class="step__label">02 · Arquitetura</span>
+            <h3 class="step__title">Desenhar o sistema</h3>
+            <p class="step__text">Arquitetura de informação, modelagem de conteúdo no CMS, tokens de design e orçamento
+              de performance (LCP, INP, CLS, peso por rota).</p>
+          </li>
+          <li class="step">
+            <span class="step__label">03 · Build</span>
+            <h3 class="step__title">Construir em produção</h3>
+            <p class="step__text">Mobile-first, componentes reutilizáveis, entregas incrementais em ambiente de
+              homologação e revisão com o cliente a cada etapa.</p>
+          </li>
+          <li class="step">
+            <span class="step__label">04 · Medição</span>
+            <h3 class="step__title">Provar o resultado</h3>
+            <p class="step__text">Lighthouse, Search Console e eventos de conversão configurados no lançamento. O site
+              é medido como canal, não avaliado só pela estética.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 · EXPERIÊNCIA -->
+    <section class="section" id="experience" aria-labelledby="xp-title">
+      <div class="wrap">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section__index">04 / Experiência</p>
+            <h2 class="section-title" id="xp-title" data-split>Onde isso foi testado.</h2>
+          </div>
+          <div data-reveal>
+            <a class="btn" href="./assets/Curriculo%20Weverton%20Costa%2020260413.pdf" target="_blank" rel="noopener" data-magnetic>
+              Baixar currículo (PDF) <span class="btn__arrow" aria-hidden="true">↓</span>
             </a>
           </div>
-          <div class="wc-main__banner--content_img">
-            <img src="./assets/img/wc-profile-20260206-1.png"
-              alt="Weverton Costa | Desenvolvedor Front-end e Webdesigner"
-              title="Weverton Costa | Desenvolvedor Front-end e Webdesigner"
-              style="display: block; max-width: 100%; height: auto;">
+        </div>
+
+        <div class="xp" data-reveal>
+          <details class="xp__item" open>
+            <summary>
+              <span class="xp__period">2023 — Hoje</span>
+              <span class="xp__role">Front-end &amp; Creative Developer</span>
+              <span class="xp__company">Independente · Wisionary Lab</span>
+              <span class="xp__icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="xp__details">
+              <li>Concepção e desenvolvimento de sites institucionais, landing pages e e-commerces, do diagnóstico ao deploy.</li>
+              <li>Temas WordPress sob medida em PHP, com campos estruturados para autonomia de conteúdo do cliente.</li>
+              <li>Experiências interativas com Three.js e JavaScript puro, sob orçamento de performance definido.</li>
+              <li>SEO técnico on-page: semântica, dados estruturados, Core Web Vitals e indexação.</li>
+            </ul>
+          </details>
+          <details class="xp__item">
+            <summary>
+              <span class="xp__period">Nov/24 — Abr/25</span>
+              <span class="xp__role">Web Designer &amp; SEO</span>
+              <span class="xp__company">Volúpia Digital · Marketing &amp; Growth</span>
+              <span class="xp__icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="xp__details">
+              <li>Layouts responsivos e sites em WordPress/Elementor orientados a UX e conversão.</li>
+              <li>SEO on-page e off-page para aumentar visibilidade orgânica de clientes.</li>
+              <li>Integrações com Salesforce Marketing Cloud e RD Station; jornadas de automação e e-mail marketing.</li>
+            </ul>
+          </details>
+          <details class="xp__item">
+            <summary>
+              <span class="xp__period">Abr/22 — Ago/23</span>
+              <span class="xp__role">Desenvolvedor Front-end</span>
+              <span class="xp__company">The Alfred Digital</span>
+              <span class="xp__icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="xp__details">
+              <li>Front-end de e-commerce em VTEX e Olist Vnda para marcas como Hausport.</li>
+              <li>Landing pages e formulários interativos para o grupo L'Oréal (Kérastase, Segredos de Salão).</li>
+              <li>Desenvolvimento e disparo de e-mail marketing e CRM (Salesforce, Wake); gestão de demandas em Kanban.</li>
+            </ul>
+          </details>
+          <details class="xp__item">
+            <summary>
+              <span class="xp__period">Dez/20 — Nov/21</span>
+              <span class="xp__role">Analista de Sistemas</span>
+              <span class="xp__company">Lojas Real Mix</span>
+              <span class="xp__icon" aria-hidden="true"></span>
+            </summary>
+            <ul class="xp__details">
+              <li>Automação do processamento de pedidos e cálculo de custo final com VBA.</li>
+              <li>Implantação de PDVs, suporte de rede e hardware; treinamento do setor de compras.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · SOBRE -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about">
+        <figure class="about__photo" data-reveal>
+          <img src="./assets/img/wc-profile-2026-720.webp"
+            srcset="./assets/img/wc-profile-2026-420.webp 420w, ./assets/img/wc-profile-2026-720.webp 720w"
+            sizes="(min-width: 900px) 440px, 90vw" width="720" height="720"
+            alt="Retrato de Weverton Costa" loading="lazy">
+          <figcaption data-clock>SP --:-- GMT-3</figcaption>
+        </figure>
+        <div>
+          <p class="section__index">05 / Sobre</p>
+          <h2 class="sr-only" id="about-title">Sobre Weverton Costa</h2>
+          <div class="about__text" data-reveal>
+            <p>Sou o Wev. Comecei em sistemas, automatizando processos de varejo, e migrei para o front-end quando
+              percebi que interface também é lógica de negócio.</p>
+            <p>Hoje trabalho na interseção entre engenharia e design: penso a arquitetura da informação, escrevo o tema do
+              CMS e programo a interação, tudo com o mesmo critério. Se não ajuda o visitante a decidir, não entra.</p>
+            <p>Atendo agências e marcas no Brasil e estou aberto a posições remotas internacionais (PT/EN).</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="wc-about" class="wc-about">
-      <div class="wc-about__content container">
-        <h2 class="wc-about__title">Sobre mim</h2>
-        <p class="wc-about__description">
-          Olá! Sou <strong>Weverton Costa</strong> (ou simplesmente <strong>"Wev"</strong>), Desenvolvedor Front-end e
-          UI Designer. Trabalho criando interfaces com foco em conversão, clareza e experiência do usuário.
-        </p>
-        <div id="more-content" class="hidden">
-          <p class="wc-about__description">
-            Tenho experiência com <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>,
-            <strong>Sass</strong>, <strong>Pug</strong>, <strong>Liquid</strong>, <strong>PHP</strong>,
-            <strong>Elementor</strong> e a plataforma <strong>WordPress</strong>, atuando em e-commerce com <a
-              href="https://vtex.com/br-pt/" target="_blank" class="wc-about__link">VTEX</a>, <a
-              href="https://www.vnda.com.br" target="_blank" class="wc-about__link">Olist Vnda</a> e <a
-              href="https://www.shopify.com" target="_blank" class="wc-about__link">Shopify</a>. Também possuo
-            experiência com CRM focado em marketing, utilizando ferramentas como <strong>Wake Tech</strong>,
-            <strong>Salesforce</strong> e <strong>RD Station</strong>.
-          </p>
-          <p class="wc-about__description">
-            Meu foco é transformar objetivos de negócio em produtos digitais escaláveis, equilibrando estética,
-            performance e usabilidade. Tenho perfil colaborativo, visão de produto e atenção aos detalhes.
-          </p>
-          <p class="wc-about__description">
-            Se você busca alguém para transformar ideias em interfaces incríveis, <a class="wc-about__link"
-              href="#wc-contact" target="_blank">VAMOS CONVERSAR!</a>
-          </p>
-        </div>
-        <button id="read-button">Leia mais...</button>
-      </div>
-    </section>
-
-    <section id="wc-skills" class="wc-skills">
-      <div class="wc-skills__container container">
-        <h2 class="wc-skills__title">Habilidades</h2>
-        <ul class="wc-skills__items">
-          <li class="wc-skills__item" id="wc-skills__html">
-            <svg viewBox="0 0 24 24">
-              <title aria-hidden="true">HTML</title>
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#E44D26"
-                d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
-
-            </svg>
-            <p class="wc-skills__item--text">HTML</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__css">
-            <!-- <svg viewBox="0 0 128 128">
-              <title aria-hidden="true">CSS</title>
-              <path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z">
-              </path>
-              <path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path>
-              <path fill="#fff"
-                d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95V51.429z">
-              </path>
-              <path fill="#EBEBEB"
-                d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018v-14.39z">
-              </path>
-              <path fill="#fff"
-                d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881H81.127z"></path>
-              <path fill="#EBEBEB"
-                d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711h34.646zm-.047 27.996v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711h16.447z">
-              </path>
-            </svg> -->
-
-            <svg width="128" height="128">
-              <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-            </svg>
-            <p class="wc-skills__item--text">CSS</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__js">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">JavaScript</title>
-              <path
-                d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"
-                fill="#F7DF1E" />
-            </svg>
-            <p class="wc-skills__item--text">JAVASCRIPT</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__php">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>PHP</title>
-              <path
-                d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"
-                fill="#777BB4" />
-            </svg>
-            <p class="wc-skills__item--text">PHP</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__tailwind">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">Tailwind CSS</title>
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#06B6D4"
-                d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
-            </svg>
-            <p class="wc-skills__item--text">Tailwind CSS</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__bootstrap">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">Bootstrap</title>
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#7952B3"
-                d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" />
-            </svg>
-            <p class="wc-skills__item--text">BOOTSTRAP</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__sass">
-            <svg viewBox="0 0 24 24">
-              <title aria-hidden="true">SASS</title>
-              <path fill-rule="evenodd" clip-rule="evenodd" fill="#CB6699"
-                d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zM9.615 15.998c.175.645.156 1.248-.024 1.792l-.065.18c-.024.061-.052.12-.078.176-.14.29-.326.56-.555.81-.698.759-1.672 1.047-2.09.805-.45-.262-.226-1.335.584-2.19.871-.918 2.12-1.509 2.12-1.509v-.003l.108-.061zm9.911-10.861c-.542-2.133-4.077-2.834-7.422-1.645-1.989.707-4.144 1.818-5.693 3.267C4.568 8.48 4.275 9.98 4.396 10.607c.427 2.211 3.457 3.657 4.703 4.73v.006c-.367.18-3.056 1.529-3.686 2.925-.675 1.47.105 2.521.615 2.655 1.575.436 3.195-.36 4.065-1.649.84-1.261.766-2.881.404-3.676.496-.135 1.08-.195 1.83-.104 2.101.24 2.521 1.56 2.43 2.1-.09.539-.523.854-.674.944-.15.091-.195.12-.181.181.015.09.091.09.21.075.165-.03 1.096-.45 1.141-1.471.045-1.29-1.186-2.729-3.375-2.7-.9.016-1.471.091-1.875.256-.03-.045-.061-.075-.105-.105-1.35-1.455-3.855-2.475-3.75-4.41.03-.705.285-2.564 4.8-4.814 3.705-1.846 6.661-1.335 7.171-.21.733 1.604-1.576 4.59-5.431 5.024-1.47.165-2.235-.404-2.431-.615-.209-.225-.239-.24-.314-.194-.12.06-.045.255 0 .375.12.3.585.825 1.396 1.095.704.225 2.43.359 4.5-.45 2.324-.899 4.139-3.405 3.614-5.505l.073.067z" />
-            </svg>
-            <p class="wc-skills__item--text">SASS</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__less">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">Less</title>
-              <path
-                d="M3.598 7.15a7.961 7.961 0 0 0-1.054.068c-.281.041-.52.124-.717.249a1.19 1.19 0 0 0-.45.497c-.098.208-.14.47-.14.802V10.3c0 .428-.084.732-.253.884-.169.166-.492.25-.984.25v1.16c.478 0 .815.083.984.249.169.166.253.47.253.912v1.548c0 .594.183 1.009.548 1.23.38.207.984.318 1.813.318v-1.078c-.393 0-.646-.07-.773-.194-.126-.124-.183-.373-.183-.746v-1.465c0-.373-.098-.663-.28-.87-.184-.208-.479-.374-.886-.484.393-.125.688-.29.871-.512.183-.22.281-.511.281-.87V9.167c0-.36.057-.608.183-.733.122-.12.412-.195.787-.2v4.547c0 .416.03.764.09 1.044.059.28.164.52.314.724.15.203.356.35.616.443.26.093.589.14.984.14.098 0 .205-.007.32-.02a5.336 5.336 0 0 0 .65-.107l-.036-.98c-.27.038-.492.057-.667.057-.353 0-.59-.092-.713-.276-.122-.183-.183-.534-.183-1.051V7.149H3.598zm16.818-.001v1.092c.393 0 .647.069.773.193.127.125.183.373.183.733v1.465c0 .359.098.65.28.87.184.222.479.387.872.512-.407.11-.702.276-.885.483-.183.208-.281.498-.281.871v1.465c0 .373-.057.622-.183.746-.126.125-.38.194-.773.194v1.078c.83 0 1.434-.11 1.813-.318.365-.221.548-.636.548-1.23v-1.548c0-.442.085-.746.253-.912.169-.166.506-.249.984-.249v-1.16c-.492 0-.815-.084-.984-.25-.168-.151-.253-.456-.253-.884V8.766c0-.332-.042-.594-.14-.801a1.19 1.19 0 0 0-.45-.498 1.828 1.828 0 0 0-.717-.249 7.252 7.252 0 0 0-1.04-.069zm-6.479 1.975c-.675 0-1.209.14-1.588.421-.38.281-.576.689-.576 1.209 0 .422.112.773.351 1.026s.618.478 1.152.688c.043.015.14.057.296.113.45.183.758.31.913.436a.592.592 0 0 1 .239.478c0 .224-.084.393-.253.506-.169.112-.408.168-.717.168-.295 0-.632-.056-.984-.155a3.901 3.901 0 0 1-.885-.337l-.14 1.04c.505.296 1.18.436 2.037.436.717 0 1.265-.155 1.659-.464.393-.309.59-.759.59-1.335 0-.436-.126-.787-.38-1.054-.252-.267-.632-.492-1.166-.689-.382-.15-.84-.277-1.209-.506a.465.465 0 0 1-.224-.421c0-.183.084-.324.239-.422.154-.098.365-.14.646-.14.506 0 1.026.126 1.574.379l.365-.956c-.562-.28-1.208-.421-1.939-.421zm4.512 0c-.675 0-1.21.14-1.589.421-.38.281-.576.689-.576 1.209 0 .422.112.773.351 1.026.24.253.619.478 1.153.688.042.015.14.057.295.113.45.183.759.31.914.436a.592.592 0 0 1 .238.478c0 .224-.084.393-.253.506-.168.112-.407.168-.716.168a3.72 3.72 0 0 1-.984-.155 3.904 3.904 0 0 1-.886-.337l-.14 1.04c.506.296 1.18.436 2.038.436.702 0 1.265-.155 1.686-.464.394-.309.59-.759.59-1.335 0-.436-.126-.787-.379-1.054s-.632-.492-1.166-.689c-.392-.153-.842-.277-1.209-.506a.465.465 0 0 1-.225-.421c0-.183.085-.324.24-.422.154-.098.364-.14.646-.14.506 0 1.026.126 1.574.379l.337-.956c-.562-.28-1.209-.421-1.94-.421zm-9.46.014c-.842 0-1.503.267-1.995.815-.492.548-.73 1.279-.73 2.192 0 .956.252 1.687.772 2.22.52.535 1.237.802 2.165.802.8 0 1.49-.183 2.08-.52l-.197-.984a3.66 3.66 0 0 1-1.813.492c-.492 0-.886-.155-1.167-.45-.28-.295-.435-.716-.45-1.25h3.852v-.591c0-.829-.225-1.49-.661-1.982-.45-.491-1.054-.744-1.855-.744zm-.013.983c.38 0 .674.127.885.38.211.253.323.618.323 1.082H7.67c.042-.492.182-.857.407-1.096.253-.239.548-.366.9-.366Z"
-                fill="#1D365D" />
-            </svg>
-            <p class="wc-skills__item--text">LESS</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__pug">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">PUG</title>
-              <path fill="#A86454"
-                d="M12.0938 4.6358c-2.0663 0-3.6817.204-4.9221.5704a6.4511 6.4511 0 0 0 .0918-.084c.0374-.0375-.0507-.0625-.2285-.0684-.5335-.0175-1.8672.1436-2.9904.7051-1.273.599-4.118 3.7446-4.0432 3.9318.075.1872 1.4594 1.3458 1.8712 1.795.2621.2995 1.0485 2.9592 1.7599 2.51.189-.131.2656-.651.33-1.2931.0582.4975.1155 1.013.1934 1.4805.1123.7488 1.087 1.3474 1.1993 2.0587.1391 1.0138.7614 1.7234 1.9805 2.174.4847.6681 1.2382.3299 1.801.6347.8984.4867 1.9091.2617 2.92.2617 1.0108 0 1.984.186 2.92-.3007.576-.2995 1.32.0311 1.8087-.5802 1.2254-.4494 1.8319-1.1633 1.9727-2.1895.1123-.7113 1.0479-1.3099 1.1602-2.0587.0633-.3799.1102-.802.1582-1.2032.0568.4994.13.9042.291 1.0157.674.4493 1.4978-2.2104 1.7599-2.5099.4118-.4492 1.7963-1.6078 1.8712-1.795.0748-.1872-2.8074-3.3327-4.0803-3.9318-1.1231-.5615-2.4568-.7226-2.9903-.705-.167.0054-.2454.0287-.2247.0624-1.1748-.308-2.6728-.4805-4.6095-.4805zm.0293.5c2.2035 0 3.8486.2253 5.01.6153.1335.0449.2387.098.3593.1465.6901.715 1.6233 1.831 2.0138 3.1173.0246.081.0405.1658.0625.248.0003.0013-.0003.0028 0 .004v.0039c.0453.77.3158 1.4169.2305 1.9903-.1536.9982-.2285 1.9726-.373 2.84l-.002.0039v.0039c-.0289.1922-.218.4762-.4786.8067-.2606.3305-.5955.7024-.6817 1.248v.006l-.0019.0038c-.1006.733-.4207 1.1997-1.17 1.5821.1252-.4447.2051-1.055.2051-1.963.0374-1.1231.0766-1.5722-.8594-2.6954-.7184-.9236-1.704-1.5746-2.793-1.8985-.1111-.3899-.7217-.836-1.551-.836-.8285 0-1.4147.422-1.5352.8204-1.1098.3182-2.116.9759-2.8458 1.9141-.936 1.1232-.8594 1.6097-.8594 2.6955 0 .9037.0795 1.5135.2031 1.961-.7697-.385-1.1078-.857-1.207-1.5802v-.0097c-.0875-.5541-.4371-.9235-.7071-1.254-.27-.3305-.4626-.6166-.4903-.8008l-.002-.004v-.0038c-.1444-.8669-.2196-1.8406-.373-2.838v-.002c-.0853-.5734.1833-1.2203.2285-1.9903v.0156c.0131-.1437.0173-.241.0254-.371.3604-1.1587 1.1531-2.1726 1.8048-2.8752a6.4135 6.4135 0 0 1 .7246-.289c1.1921-.3916 2.8593-.6153 5.0628-.6153zm-5.2092 3.805a1.6473 1.6473 0 0 0-1.6349 1.6484 1.6473 1.6473 0 0 0 1.6485 1.6466 1.6473 1.6473 0 0 0 .4415-.0606c.3487-.3747.7177-.7223 1.1113-1.041a1.6473 1.6473 0 0 0 .0938-.545 1.6473 1.6473 0 0 0-1.6466-1.6485 1.6473 1.6473 0 0 0-.0136 0zm10.2973 0a1.6473 1.6473 0 0 0-1.6368 1.6484 1.6473 1.6473 0 0 0 .1504.6836c.3125.2642.611.547.8945.8477a1.6473 1.6473 0 0 0 .6036.1153 1.6473 1.6473 0 0 0 1.6465-1.6466 1.6473 1.6473 0 0 0-1.6465-1.6485 1.6473 1.6473 0 0 0-.0117 0zm-9.8715.4863a.4118.4118 0 0 1 .4101.412.4118.4118 0 0 1-.4101.4122.4118.4118 0 0 1-.4122-.4121.4118.4118 0 0 1 .4122-.4121zm9.471 0a.4118.4118 0 0 1 .4122.412.4118.4118 0 0 1-.4121.4122.4118.4118 0 0 1-.4122-.4121.4118.4118 0 0 1 .4122-.4121zm-5.1095 1.4863a.1498.2995 17.23 0 1 .0293.004.1498.2995 17.23 0 1 .0547.33.1498.2995 17.23 0 1-.2325.2422.1498.2995 17.23 0 1-.0527-.33.1498.2995 17.23 0 1 .2012-.2462zm.6719.0215a.2995.1498 75.54 0 1 .205.254.2995.1498 75.54 0 1-.0703.328.2995.1498 75.54 0 1-.2207-.2519.2995.1498 75.54 0 1 .0703-.3281.2995.1498 75.54 0 1 .0157-.002zm-.3164.4766s.0358.226.1855.3008c.1498.0749.8614-.1504.8614-.1504-.337.262-.9727.263-.9727.338v.373c0 .4079.0263 1.4614-.0313 1.6856.8238.0045 2.09 1.1255 2.09 2.508v.0741c-.0375-1.3478-1.6091-2.4337-2.0958-2.4337-.4867 0-2.0603 1.0485-2.0978 2.4337v-.0742c0-1.3626 1.2326-2.47 2.0567-2.506-.0704-.5517-.0722-1.1372-.0722-1.6875v-.373c-.2145-.0954-.4322-.1714-.6563-.2364.1846.0326.371.0488.545.0488.1497-.0749.1875-.3008.1875-.3008zm-3.0412 1.3477a.1498.1498 0 0 1 .0078 0 .1498.1498 0 0 1 .1504.1504.1498.1498 0 0 1-.1504.1504.1498.1498 0 0 1-.1504-.1504.1498.1498 0 0 1 .1426-.1504zm1.1231 0a.1498.1498 0 0 1 .0078 0 .1498.1498 0 0 1 .1504.1504.1498.1498 0 0 1-.1504.1504.1498.1498 0 0 1-.1504-.1504.1498.1498 0 0 1 .1426-.1504zm3.67 0a.1498.1498 0 0 1 .0079 0 .1498.1498 0 0 1 .1504.1504.1498.1498 0 0 1-.1504.1504.1498.1498 0 0 1-.1504-.1504.1498.1498 0 0 1 .1426-.1504zm1.1232 0a.1498.1498 0 0 1 .0078 0 .1498.1498 0 0 1 .1504.1504.1498.1498 0 0 1-.1504.1504.1498.1498 0 0 1-.1504-.1504.1498.1498 0 0 1 .1426-.1504zm-5.6526.8985a.1498.1498 0 0 1 .0078 0 .1498.1498 0 0 1 .1484.1504.1498.1498 0 0 1-.1484.1504.1498.1498 0 0 1-.1504-.1504.1498.1498 0 0 1 .1426-.1504zm5.3908 0a.1498.1498 0 0 1 .006 0 .1498.1498 0 0 1 .1503.1504.1498.1498 0 0 1-.1504.1504.1498.1498 0 0 1-.1484-.1504.1498.1498 0 0 1 .1425-.1504Z" />
-            </svg>
-            <p class="wc-skills__item--text">PUG</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__liquid">
-            <svg viewBox="0 0 32 32">
-              <title aria-hidden="true">LIQUID by Shopify</title>
-              <path
-                d="M29.988,22.372l-.748.048a5.209,5.209,0,0,1-2.99-.671,7.8,7.8,0,0,0-7.8,0,5.275,5.275,0,0,1-5.3.01A7.262,7.262,0,0,0,9.263,20.7a7.229,7.229,0,0,0-3.94,1.06,4.751,4.751,0,0,1-2.47.7l-.838,0c0,.889-.009,1.739-.015,2.515l.861,0a7.237,7.237,0,0,0,3.75-1.052,4.763,4.763,0,0,1,2.659-.7,4.835,4.835,0,0,1,2.634.718,7.794,7.794,0,0,0,7.8,0,5.287,5.287,0,0,1,5.319,0,7.709,7.709,0,0,0,4.4.989L30,24.888C29.995,24.1,29.991,23.249,29.988,22.372Z"
-                style="fill:#004999" />
-              <path
-                d="M29.983,15.581l-.743.047a5.226,5.226,0,0,1-2.99-.671,7.8,7.8,0,0,0-7.8,0,5.278,5.278,0,0,1-5.3.01A7.312,7.312,0,0,0,9.263,13.91a7.3,7.3,0,0,0-3.941,1.06,4.742,4.742,0,0,1-2.469.7l-.828,0c0,.849,0,1.693,0,2.515l.84,0a7.237,7.237,0,0,0,3.75-1.052,4.7,4.7,0,0,1,2.659-.7,4.8,4.8,0,0,1,2.634.718,7.794,7.794,0,0,0,7.8,0,5.287,5.287,0,0,1,5.319,0,7.709,7.709,0,0,0,4.4.989l.568-.037C29.983,17.269,29.983,16.424,29.983,15.581Z"
-                style="fill:#004999" />
-              <path
-                d="M29.24,9.137a5.254,5.254,0,0,1-2.99-.671,7.8,7.8,0,0,0-7.8,0,5.275,5.275,0,0,1-5.3.009A7.16,7.16,0,0,0,9.263,7.42a7.159,7.159,0,0,0-3.94,1.059,4.738,4.738,0,0,1-2.469.7l-.834,0c0,.82,0,1.664,0,2.517l.836,0a7.237,7.237,0,0,0,3.75-1.052,4.738,4.738,0,0,1,2.659-.706,4.814,4.814,0,0,1,2.634.719,7.791,7.791,0,0,0,7.8,0,5.293,5.293,0,0,1,5.319,0,7.732,7.732,0,0,0,4.4.988l.568-.037c0-.859,0-1.7.007-2.516Z"
-                fill="#004999" />
-            </svg>
-            <p class="wc-skills__item--text">LIQUID</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__figma">
-            <svg viewBox="0 0 128 128">
-              <title aria-hidden="true">Figma</title>
-              <path fill="#0acf83"
-                d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129zm0 0"></path>
-              <path fill="#a259ff" d="M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5zm0 0"></path>
-              <path fill="#f24e1e" d="M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5zm0 0"></path>
-              <path fill="#ff7262" d="M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67zm0 0"></path>
-              <path fill="#1abcfe"
-                d="M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5zm0 0"></path>
-            </svg>
-            <p class="wc-skills__item--text">FIGMA</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__git">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">Git</title>
-              <path
-                d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"
-                fill="#F05032" />
-            </svg>
-            <p class="wc-skills__item--text">GIT</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__github">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">GitHub</title>
-              <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                fill="#fff" />
-            </svg>
-            <p class="wc-skills__item--text">GITHUB</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__elementor">
-            <svg id="skill-elementor-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">Elementor</title>
-              <g>
-                <path
-                  d="m256.061 0c-141.385-.034-256.027 114.554-256.061 255.939s114.554 256.027 255.939 256.061 256.027-114.554 256.061-255.939c0-.02 0-.041 0-.061 0-141.361-114.578-255.966-255.939-256z"
-                  fill="#ab003a" />
-                <g fill="#ff7ce8">
-                  <path d="m149.364 149.303h42.667v213.333h-42.667z" />
-                  <path d="m234.697 319.97h128v42.667h-128z" />
-                  <path d="m234.697 234.636h128v42.667h-128z" />
-                  <path d="m234.697 149.303h128v42.667h-128z" />
-                </g>
-              </g>
-            </svg>
-            <p class="wc-skills__item--text">ELEMENTOR</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__wordpress">
-            <svg id="skill-wordpress_simpleicon" viewBox="0 0 24 24">
-              <title aria-hidden="true">WORDPRESS</title>
-              <path
-                d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"
-                fill="#21759B" />
-            </svg>
-            <p class="wc-skills__item--text">WORDPRESS</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__vtex">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title aria-hidden="true">VTEX</title>
-              <path
-                d="M22.2027 1.7925H4.2812c-1.3897 0-2.2795 1.4698-1.6293 2.6917l1.7927 3.3773H1.1947a1.2 1.2 0 0 0-.5873.1537 1.1924 1.1924 0 0 0-.4356.421 1.1847 1.1847 0 0 0-.0342 1.1683l5.766 10.858c.1017.191.2537.3507.4399.4622a1.1996 1.1996 0 0 0 1.2326 0 1.1913 1.1913 0 0 0 .4398-.4623l1.566-2.933 1.9647 3.7006c.6914 1.3016 2.5645 1.304 3.2584.0038L23.7878 4.416c.635-1.1895-.2314-2.6235-1.5851-2.6235ZM14.1524 8.978l-3.8733 7.2533a.7932.7932 0 0 1-.2927.3074.7986.7986 0 0 1-.82 0 .7933.7933 0 0 1-.2927-.3074L5.0378 9.0086a.7883.7883 0 0 1 .0208-.7776.7933.7933 0 0 1 .2891-.281.7985.7985 0 0 1 .3906-.1033h7.7307a.7769.7769 0 0 1 .381.0998.7717.7717 0 0 1 .2823.2736.7672.7672 0 0 1 .02.758z"
-                fill="#ED125F" />
-            </svg>
-            <p class="wc-skills__item--text">VTEX</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__olist">
-            <svg id="skill-olist_colored" viewBox="100 0 450 450">
-              <title aria-hidden="true">Olist Vnda</title>
-              <path class="cls-1"
-                d="m528.76,202.7h-26.1s-.1,36.5-.1,36.5c0,17.55,14.98,21.12,26.34,21.6,1.49.06,2.66,1.3,2.66,2.8v23.65c0,1.59-1.3,2.84-2.89,2.8-19.66-.47-36.04-5.79-45.81-15.82-13.67-14.04-13.35-30.09-13.25-31.5l.29-100.9c0-1.54,1.26-2.79,2.8-2.79h27.39c1.55,0,2.81,1.27,2.8,2.82l-.23,33.17h26.1c1.55,0,2.8,1.25,2.8,2.8v22.07c0,1.55-1.25,2.8-2.8,2.8Z"
-                fill="#0a4ee4" />
-              <path class="cls-1"
-                d="m288.85,282.87l.07-158.73c0-1.55-1.25-2.8-2.8-2.8h-27.44c-1.55,0-2.8,1.25-2.8,2.8v158.73c0,1.55,1.25,2.8,2.8,2.8h27.37c1.55,0,2.8-1.25,2.8-2.8Z"
-                fill="#0a4ee4" />
-              <path class="cls-1"
-                d="m435.39,220.86c-8.4-3.16-19.54-5.54-29.39-7.16-4.88-.86-8.77-2.11-11.58-3.73-4.81-2.45-4.88-10.05-.14-12.81,5.38-3.65,18.52-3.31,24.07.79,2.13,1.26,3.83,3.57,5.05,6.33.41.93,1.44,1.41,2.41,1.12l24.72-7.53c1.65-.5,2.44-2.36,1.7-3.92-3.11-6.59-7.96-12.19-14.57-16.62-16.14-11.65-49.44-11.48-64.9.6-13.84,8.93-17.29,33.37-6.6,45.98,9.05,10.8,23.65,14.67,37.8,17.65l.14.03c6.15.96,16.67 3.03 20 5.49 5.26 3.14 4.71 10.41-.33 13.79-2.83 2.09-7.4 3.15-13.59 3.15-11.96-.02-19.95-4.37-23.56-14.42-.34-.94-1.41-1.52-2.38-1.26l-24.91 6.45c-1.54.4-2.45 2-1.99 3.52 2.8 9.07 8.21 16.59 16.14 21.89 26.63 17.89 86.03 13.3 85.16-28.62 0-8.18-2.14-14.79-6.38-19.67-4.15-4.77-9.83-8.49-16.89-11.05Z"
-                fill="#0a4ee4" />
-              <rect x="308.64" y="170.58" width="33.45" height="115.09" rx="2.8" ry="2.8" fill="#0a4ee4" />
-              <path
-                d="m325.36,132.69c-10.06,0-18.22-8.16-18.22-18.22v19.23c0,10.06,8.16,18.22,18.22,18.22,10.06,0,18.22-8.16,18.22-18.22v-19.23c0,10.06-8.16,18.22-18.22,18.22Z"
-                fill="#e64e36" />
-              <circle cx="325.36" cy="114.47" r="18.22" fill="#0a4ee4" />
-              <path
-                d="m181.81,168.73c-33.51,0-60.67,27.16-60.67,60.67,0,33.51,27.16,60.67,60.67,60.67,33.51,0,60.67-27.16,60.67-60.67,0-33.51-27.16-60.67-60.67-60.67Zm0,90.45c-16.45,0-29.78-13.33-29.78-29.78s13.33-29.78,29.78-29.78,29.78,13.33,29.78,29.78-13.33,29.78-29.78,29.78Z"
-                fill="#0a4ee4" />
-            </svg>
-            <p class="wc-skills__item--text">Olist Vnda</p>
-          </li>
-          <li class="wc-skills__item" id="wc-skills__shopify">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
-              x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-              <title aria-hidden="true">Shopify</title>
-              <g>
-                <path style="fill:#95BF47;"
-                  d="M425.834,98.591c-0.354-2.585-2.618-4.015-4.485-4.171c-1.867-0.156-38.313-0.71-38.313-0.71   s-30.481-29.603-33.492-32.616s-8.893-2.099-11.176-1.427c-0.034,0.01-5.72,1.771-15.317,4.742   c-1.601-5.202-3.963-11.591-7.329-18.011c-10.854-20.704-26.743-31.663-45.948-31.691c-0.022,0-0.042,0-0.065,0   c-1.331,0-2.658,0.125-3.986,0.246c-0.564-0.68-1.135-1.354-1.736-1.997c-8.361-8.949-19.098-13.309-31.949-12.932   c-24.808,0.711-49.501,18.624-69.53,50.436c-14.099,22.39-24.81,50.517-27.856,72.286c-28.478,8.819-48.403,14.99-48.834,15.125   c-14.375,4.511-14.827,4.963-16.712,18.506c-1.427,10.253-39.036,301.111-39.036,301.111L345.304,512l136.624-33.959   C481.928,478.041,426.187,101.176,425.834,98.591z M152.312,117.276c8.524-39.856,41.92-99.649,80.203-100.75   c5.824-0.122,10.729,1.156,14.918,3.913c-6.7,3.479-13.181,8.479-19.26,14.999c-15.756,16.902-27.825,43.146-32.638,68.453   C180.515,108.542,165.826,113.091,152.312,117.276z M266.306,81.978c-16.514,5.113-34.543,10.696-52.629,16.296   c5.092-19.478,14.73-38.871,26.574-51.576c4.406-4.726,10.57-10,17.868-13.011C264.985,47.994,266.472,68.276,266.306,81.978z    M282.796,76.872c-0.183-12.561-1.683-30.032-7.534-45.135c18.821,3.566,28.088,24.862,31.999,37.56   C300.008,71.542,291.746,74.1,282.796,76.872z" />
-                <path style="fill:#5E8E3E;"
-                  d="M421.349,94.42c-1.867-0.156-38.313-0.71-38.313-0.71s-30.481-29.603-33.492-32.616   c-1.123-1.124-2.646-1.699-4.232-1.947l0.008,452.85l136.608-33.956c0,0-55.74-376.865-56.094-379.45   C425.48,96.006,423.216,94.576,421.349,94.42z" />
-                <path style="fill:#FFFFFF;"
-                  d="M269.592,164.668l-15.869,59.361c0,0-17.7-8.06-38.685-6.735   c-30.769,1.943-31.096,21.352-30.789,26.216c1.676,26.549,71.518,32.35,75.444,94.532c3.089,48.922-25.949,82.386-67.79,85.028   c-50.209,3.17-77.856-26.457-77.856-26.457l10.639-45.265c0,0,27.823,20.992,50.095,19.586   c14.548-0.919,19.746-12.751,19.218-21.119c-2.187-34.632-59.059-32.592-62.652-89.495c-3.024-47.892,28.424-96.409,97.816-100.791   C255.9,157.842,269.592,164.668,269.592,164.668z" />
-              </g>
-            </svg>
-            <p class="wc-skills__item--text">SHOPIFY</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="wc-projects" class="wc-projects">
-      <div class="wc-projects__container container">
-        <h2 class="wc-projects__title">Projetos</h2>
-        <div class="wc-projects__items swiper-container">
-          <div class="swiper-wrapper">
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_werti.webp" alt="ANAC (Casa do Cardíaco)"
-                  title="ANAC (Casa do Cardíaco)" style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">W.E.R. Engenharia e Tecnologia</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Redesign de site WordPress: Moderno, responsivo, com navegação intuitiva e otimização para
-                  dispositivos móveis e SEO. Aqui fui o responsável pelo projeto, desenvolvimento front-end e
-                  otimização SEO.
-                  <br>
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_wordpress.svg#skill-wordpress_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_php.svg#skill-php_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://www.werti.com.br" target="_blank">
-                    VER SITE
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_anac.png" alt="ANAC (Casa do Cardíaco)"
-                  title="ANAC (Casa do Cardíaco)" style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">ANAC (Casa do Cardíaco)</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Redesign de site WordPress: Moderno, responsivo, com navegação intuitiva e otimização para
-                  dispositivos móveis e SEO. Aqui fui o responsável pelo projeto, desenvolvimento front-end e
-                  otimização SEO.
-                  <br>
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_wordpress.svg#skill-wordpress_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_php.svg#skill-php_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://www.anacar.org.br" target="_blank">
-                    VER SITE
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_kaianyhipnoterapeuta.png" alt="Kaiany Massera Hipnoterapeuta"
-                  title="Kaiany Massera Hipnoterapeuta" style="display: block; max-width: 100%; height: auto;"
-                  loading="lazy">
-                <h3 class="wc-projects__item-subtitle">Kaiany Massera Hipnoterapeuta</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Protótipo de site desenvolvido no Figma: UX/UI Design, Layout moderno, responsivo, com navegação
-                  intuitiva.
-                  <br>
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <style>
-                        #skill-figma_simpleicon path {
-                          fill: #daa520;
-                        }
-                      </style>
-                      <use xlink:href="./assets/svg/skills_figma.svg#skill-figma_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://www.figma.com/community/file/1487888323341957426" target="_blank">
-                    VER PROTÓTIPO
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_hausport.webp" alt="Hausport" title="Hausport"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">Hausport</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  E-commerce desenvolvido na plataforma Olist Vnda em parceria com a agência The Alfred. Estive na
-                  frente do desenvolvimento front-end usando a linguagem Liquid e JavaScript.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_liquid.svg#skill-liquid_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_sass.svg#skill-sass_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="40" height="40">
-                      <use style="fill: #daa520;" xlink:href="./assets/svg/skills_olist.svg#skill-olist_monochrome" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://www.hausport.com.br" target="_blank">
-                    VER SITE
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_kerastase.webp" alt="Formulário Blond Action - Kérastase Paris"
-                  title="Formulário Blond Action - Kérastase Paris"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">Kérastase Paris | Blond Action</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Landing Page com formulário interativo para a linha Blond Action da Kérastase Paris, desenvolvida em
-                  parceria com a agência The Alfred.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_pug.svg#skill-pug_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_sass.svg#skill-sass_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://github.com/Wev-at2/loreal-blond-action" target="_blank">
-                    VER REPOSITÓRIO
-                  </a>
-                </li>
-                <li>
-                  <a href="https://cloud.mail.kerastase.com.br/kerastase-paris" target="_blank">
-                    VER DEPLOY
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_kerastase-curl_manifesto.webp"
-                  alt="Formulário Blond Action - Kérastase Paris" title="Formulário Blond Action - Kérastase Paris"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">Kérastase Paris | Curl Manifesto</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Landing Page com formulário interativo para a linha Curl Manifesto da Kérastase Paris, desenvolvida em
-                  parceria com a agência The Alfred.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_pug.svg#skill-pug_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_sass.svg#skill-sass_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://cloud.mail.kerastase.com.br/tratamento-profissional" target="_blank">
-                    VER DEPLOY
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_segredosdesalao.webp" alt="Formulário Blond Action - Kérastase Paris"
-                  title="Formulário Blond Action - Kérastase Paris"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">Segredos de Salão | Meu Segredo Pro</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Landing Page para apresentar a plataforma Meu Segredo Pro da L'Oréal, desenvolvida em parceria com a
-                  agência The Alfred.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_pug.svg#skill-pug_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_sass.svg#skill-sass_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://thealfred.com.br/enext/meu-segredo/" target="_blank">
-                    VER DEPLOY
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_furia.png" alt="FURIA STORE" title="FURIA STORE"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">FURIA STORE</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Landing page desenvolvida para a loja FURIA STORE como parte de um processo seletivo.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_html.svg#skill-html_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://github.com/Wev-at2/seriedesign-testedev" target="_blank">
-                    VER REPOSITÓRIO
-                  </a>
-                </li>
-                <li>
-                  <a href="https://wev-at2.github.io/seriedesign-testedev/parte1/" target="_blank">
-                    VER DEPLOY
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_ida-futurefriday.webp" alt="IDA - Future Friday 2023"
-                  title="IDA - Future Friday 2023" style="display: block; max-width: 100%; height: auto;"
-                  loading="lazy">
-                <h3 class="wc-projects__item-subtitle">IDA | Future Friday 2023</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Landing Page com formulário e countdown para a black friday 2023 antecipada do site
-                  <a href="https://ida.com.vc" target="_blank">IDA.com.vc</a>.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_html.svg#skill-html_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_pug.svg#skill-pug_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_sass.svg#skill-sass_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://github.com/Wev-at2/lp_ida_blackfriday-20231025" target="_blank">
-                    VER REPOSITÓRIO
-                  </a>
-                </li>
-                <li>
-                  <a href="https://wev-at2.github.io/lp_ida_blackfriday-20231025/" target="_blank">
-                    VER DEPLOY
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_interative_form_deadpool.webp" alt="Formulário interativo - Deadpool"
-                  title="Formulário interativo - Deadpool" style="display: block; max-width: 100%; height: auto;"
-                  loading="lazy">
-                <h3 class="wc-projects__item-subtitle">Formulário interativo <br> Deadpool</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                  Formulário interativo com avatar do Deadpool que reage dinamicamente aos campos de e-mail e senha.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_html.svg#skill-html_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://github.com/Wev-at2/INTERACTIVE-LOGIN-FORM" target="_blank">
-                    VER REPOSITÓRIO
-                  </a>
-                </li>
-                <li>
-                  <a href="https://wev-at2.github.io/interactive-login-form-deadpool/dist/" target="_blank">
-                    VER DEPLOY
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_soulhara.png" alt="SOUL HARA" title="SOUL HARA"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">SOUL HARA</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                    E-commerce desenvolvido na plataforma Shopify em parceria com a agência Volúpia Digital. Fui responsável pela prototipação, UX/UI Design, desenvolvimento front-end e integrações.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_shopify-1.svg#skill-shopify_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_liquid.svg#skill-liquid_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://soulhara.com.br" target="_blank">
-                    Deploy
-                  </a>
-                </li>
-              </ul>
-            </div> -->
-
-            <!-- <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_gesstorha.png" alt="GESSTORHA" title="GESSTORHA"
-                  style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">GESSTORHA</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                    Redesign de site institucional em WordPress: Moderno, responsivo, com navegação intuitiva e otimização
-                    SEO, desenvolvido em parceria com a agência Volúpia Digital, onde fui responsável pelo desenvolvimento front-end do site.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_wordpress.svg#skill-wordpress_simpleicon" />
-                    </svg>
-
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use width="20" height="20"
-                        xlink:href="./assets/svg/skills_elementor-2.svg#skill-elementor-2_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://www.gesstorha.com.br/" target="_blank">
-                    Deploy
-                  </a>
-                </li>
-              </ul>
-            </div> -->
-
-            <!-- <div class="wc-projects__item swiper-slide">
-              <div class="wc-projects__item--content">
-                <img src="./assets/img/wc-projects_skoltech-placamae.png" alt="SKOLTECH INFORMÁTICA"
-                  title="SKOLTECH INFORMÁTICA" style="display: block; max-width: 100%; height: auto;" loading="lazy">
-                <h3 class="wc-projects__item-subtitle">SKOLTECH INFORMÁTICA</h3>
-                <p class="wc-projects__item-description" style="font-size: .75rem;">
-                    Landing Pages de conversão na WBUY: Fui responsável pela prototipação, UX/UI Design moderno, implementação front-end, prototipação responsiva, navegação intuitiva e otimização SEO, realizado em parceria com a agência Volúpia Digital.
-                </p>
-                <ul class="wc-projects__item--skills">
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <style>
-                        #skill-figma_simpleicon path {
-                          fill: #daa520;
-                        }
-                      </style>
-                      <use xlink:href="./assets/svg/skills_figma.svg#skill-figma_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_html.svg#skill-html_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_css.svg#skill-css_simpleicon" />
-                    </svg>
-                  </li>
-                  <li class="wc-projects__item--skills_item">
-                    <svg width="20" height="20">
-                      <use xlink:href="./assets/svg/skills_javascript.svg#skill-javascript_simpleicon" />
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-              <ul class="wc-projects__item--links">
-                <li>
-                  <a href="https://www.skoltechinfor.com/m/lp-processadores" target="_blank">
-                    Processadores
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.skoltechinfor.com/m/lp-placas-maes" target="_blank">
-                    Placas Mãe
-                  </a>
-                </li>
-              </ul>
-            </div> -->
-
+    <!-- 07 · CONTATO -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="section__index">06 / Contato</p>
+        <h2 class="contact__title" id="contact-title" data-split>Tem um projeto ou uma vaga? <em>Vamos conversar.</em></h2>
+        <div class="contact__grid">
+          <div data-reveal>
+            <a class="contact__email link-underline" href="mailto:weverton.costa2022@gmail.com?subject=Projeto%20ou%20oportunidade"
+              data-copy="weverton.costa2022@gmail.com" data-cursor="Copiar">weverton.costa2022@gmail.com</a>
+            <p class="contact__hint">Clique para copiar · respondo em até 24h úteis</p>
           </div>
-
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="wc-experience" class="wc-experience">
-      <div class="wc-experience__container container">
-        <h2 class="wc-experience__title">Experiências</h2>
-        <ul class="wc-experience__items">
-          <li class="wc-experience__item">
-            <details>
-              <summary>
-                <h3>Desenvolvedor Front-end e UX/UI Designer</h3>
-                <h4>
-                  Freelancer/Autônomo
-                  <br>
-                  <span>Ago/2023 - Atualmente</span>
-                </h4>
-              </summary>
-              <ul>
-                <li>
-                  Criação e manutenção de layouts de sites responsivos, priorizando a experiência do usuário (UX);
-                </li>
-                <li>Desenvolvimento front-end de sites Institucionais, One-pages, Landing Pages, e-mails e outras
-                  mídias;</li>
-                <li>
-                  Desenvolvimento de sites em WordPress, garantindo integração e personalização;
-                </li>
-                <li>
-                  Otimização de sites com práticas de SEO on-page e off-page para melhorar a visibilidade nos mecanismos
-                  de busca;
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li class="wc-experience__item">
-            <details>
-              <summary>
-                <h3>Web Designer & SEO</h3>
-                <h4>
-                  Volúpia Digital - Assessoria de Marketing e Growth
-                  <br>
-                  <span>Nov/2024 - Abr/2025</span>
-                </h4>
-              </summary>
-              <ul>
-                <li>
-                  Criação e manutenção de layouts de sites responsivos, priorizando a experiência do usuário (UX);
-                </li>
-                <li>
-                  Desenvolvimento e edição de designs digitais para sites, e-mails e outras mídias, utilizando HTML e
-                  CSS;
-                </li>
-                <li>
-                  Desenvolvimento de sites em WordPress e Elementor, garantindo integração e personalização;
-                </li>
-                <li>
-                  Otimização de sites com práticas de SEO on-page e off-page para melhorar a visibilidade nos mecanismos
-                  de busca;
-                </li>
-                <li>
-                  Implementação de integrações com ferramentas de e-commerce e automação de marketing, como Salesforce
-                  Marketing Cloud e RD Station;
-                </li>
-                <li>
-                  Configuração de jornadas de automação e campanhas de e-mail marketing;
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li class="wc-experience__item">
-            <details>
-              <summary>
-                <h3>Desenvolvedor Front-end</h3>
-                <h4>
-                  The Alfred Digital
-                  <br>
-                  <span>Abr/2022 - Ago/2023</span>
-                </h4>
-              </summary>
-              <ul>
-                <li>Desenvolvimento Front-end nas principais plataformas do mercado (VTEX e Olist Vnda)</li>
-                <li>Desenvolvimento e disparo de e-mails marketing e CRM (SalesForce e Wake)</li>
-                <li>Gerenciamento de demandas com Kanban via plataforma Monday.com</li>
-              </ul>
-            </details>
-          </li>
-          <li class="wc-experience__item">
-            <details>
-              <summary>
-                <h3>Analista de Sistemas</h3>
-                <h4>
-                  Lojas Real Mix
-                  <br>
-                  <span>Dez/2020 - Nov/2021</span>
-                </h4>
-              </summary>
-              <ul>
-                <li>Atualizações de cadastros de produtos, funcionários e fornecedores no sistema Mobne
-                </li>
-                <li>
-                  instalações de PDVs em lojas, solução de problemas de hardware, de rede e dispositivos compartilhados.
-                </li>
-                <li>
-                  Desenvolvimento e teste do sistema de processamento de pedidos e custo final com uso do Visual Basic
-                  for Applications
-                </li>
-                <li>
-                  Responsável pelo treinamento do setor de compras.
-                </li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="wc-contact" class="wc-contact">
-      <div class="wc-contact__container container">
-        <h2>Contato</h2>
-        <div class="wc-contact__container">
-          <p class="wc-contact__text">Entre em contato comigo</p>
-          <div class="wc-contact__flex">
-            <a class="wc-contact__link"
-              href="mailto:weverton.costa2022@gmail.com?subject=Networking%20e%20Possiveis%20Oportunidades"
-              target="_blank">Através do e-mail</a>
-            <a class="wc-contact__link"
-              href="https://wa.me/5511981304510?text=Olá%20Weverton,%20tudo%20bem?%20Vim%20aqui%20através%20do%20seu%20site%20portfólio."
-              target="_blank">Através do WhatsApp</a>
+          <div class="contact__actions" data-reveal>
+            <a class="btn btn--primary" href="https://wa.me/5511981304510?text=Ol%C3%A1%20Weverton%2C%20vim%20pelo%20seu%20portf%C3%B3lio."
+              target="_blank" rel="noopener" data-magnetic>WhatsApp <span class="btn__arrow" aria-hidden="true">↗</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/weverton-costa/" target="_blank" rel="noopener" data-magnetic>LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="wc-footer">
-    <div class="wc-footer__rightReserved">
-      <p class="wc-footer__rightReserved--text">
-        &copy; 2025 •
-        <a href="https://wevertoncosta.dev.br">
-          Weverton Costa.
-        </a>
-        Todos os direitos reservados.
-      </p>
-    </div>
-    <div class="wc-footer__socials">
-      <ul class="wc-footer__socials--items">
-        <li class="wc-footer__socials--item">
-          <a class="wc-footer__socials--item_link" title="Weverton Costa | GitHub" href="https://github.com/Wev-at2"
-            target="_blank">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>GitHub</title>
-              <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-            </svg>
-          </a>
-        </li>
-        <li class="wc-footer__socials--item">
-          <a class="wc-footer__socials--item_link" title="Weverton Costa | LinkedIn"
-            href="https://www.linkedin.com/in/weverton-costa/" target="_blank">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>LinkedIn</title>
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </a>
-        </li>
-        <li class="wc-footer__socials--item">
-          <a class="wc-footer__socials--item_link" title="Weverton Costa | Instagram"
-            href="https://instagram.com/Wev_at2" target="_blank">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Instagram</title>
-              <path
-                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.261-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
-            </svg>
-          </a>
-        </li>
-        <li class="wc-footer__socials--item">
-          <a class="wc-footer__socials--item_link" title="Weverton Costa | Facebook"
-            href="https://facebook.com/weverton.costa.cr7" target="_blank">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Facebook</title>
-              <path
-                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-          </a>
-        </li>
-        <li class="wc-footer__socials--item">
-          <a class="wc-footer__socials--item_link" title="Weverton Costa | WhatsApp"
-            href="https://wa.me/5511981304510?text=Olá%20Weverton,%20tudo%20bem?%20Vim%20aqui%20através%20do%20seu%20site%20portfólio."
-            target="_blank">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>WhatsApp</title>
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-            </svg>
-          </a>
-        </li>
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>© <span id="year">2026</span> Weverton Costa · Feito à mão, sem framework</p>
+      <ul class="site-footer__socials">
+        <li><a href="https://github.com/Wev-at2" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/weverton-costa/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://instagram.com/Wev_at2" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#top">Topo ↑</a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <div class="toast" role="status" aria-live="polite"></div>
+
   <script>
-    fetch('https://notifica-site.onrender.com/track-visit');
+    document.getElementById("year").textContent = new Date().getFullYear();
+    fetch("https://notifica-site.onrender.com/track-visit").catch(() => {});
   </script>
 </body>
 

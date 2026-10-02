@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Case Wisionary Lab | Weverton Costa</title>
+  <meta name="description"
+    content="Como construí o site da Wisionary Lab: WordPress sob medida, Three.js com render loop otimizado e CSS mobile-first. Uma vitrine técnica que também é funil de aquisição.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Weverton Costa">
+  <meta name="theme-color" content="#07080b">
+
+  <link rel="shortcut icon" href="../../assets/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicon/apple-touch-icon.png">
+  <link rel="canonical" href="https://wevertoncosta.dev.br/cases/wisionary-lab/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wevertoncosta.dev.br/cases/wisionary-lab/">
+  <meta property="og:title" content="Case Wisionary Lab: 3D, WordPress e performance no mesmo site">
+  <meta property="og:description"
+    content="Engenharia de software + design de interação: como equilibrar Three.js, CMS e Core Web Vitals.">
+  <meta property="og:image" content="https://wevertoncosta.dev.br/assets/img/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../../assets/css/v2/portfolio.css">
+
+  <script src="../../assets/js/v2/app.js" type="module"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"><span class="cursor__label"></span></span>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="../../" class="brand" aria-label="Weverton Costa — voltar para a home">
+        <svg viewBox="0 0 1800 1800" fill="none" aria-hidden="true">
+          <path stroke-width="60" fill-rule="evenodd" clip-rule="evenodd"
+            d="M900 0L400 1350L200 700H0L400 1800L554.526 1398.23C551.548 1416.39 550 1435.03 550 1454.02C550 1645.1 706.7 1800 900 1800C1093.3 1800 1250 1645.1 1250 1454.02C1250 1435.03 1248.45 1416.39 1245.47 1398.23L1400 1800L1800 700H1600L1400 1350L900 0ZM1195.72 1268.87L900 500L604.282 1268.87C653.507 1192.2 732.403 1135.98 825 1116V1218.2C723.572 1249.69 650 1343.36 650 1454.02C650 1590.5 761.929 1701.15 900 1701.15C1038.07 1701.15 1150 1590.5 1150 1454.02C1150 1343.36 1076.43 1249.69 975 1218.2V1116C1067.6 1135.98 1146.49 1192.2 1195.72 1268.87Z" />
+        </svg>
+        <span>Weverton Costa</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+          <span class="nav__toggle-text">Menu</span>
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+        <div class="nav__panel" id="nav-panel">
+          <ul class="nav__list">
+            <li><a href="#challenge" data-scramble>Desafio</a></li>
+            <li><a href="#action" data-scramble>Execução</a></li>
+            <li><a href="#results" data-scramble>Resultados</a></li>
+            <li><a href="../../#work" data-scramble>Outros cases</a></li>
+          </ul>
+          <span class="nav__clock" data-clock aria-hidden="true">SP --:-- GMT-3</span>
+          <div class="nav__cta">
+            <a class="btn btn--primary" href="../../#contact" data-magnetic="0.25">Vamos conversar</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>Case 01 · Creative Development</p>
+        <h1 class="display case-hero__title" id="case-title" data-split>
+          Wisionary Lab: o site <span class="gold">é a prova.</span>
+        </h1>
+        <p class="lead case-hero__lead" data-reveal style="--delay: .2s">
+          Como transformei o site de uma agência que vende "presença digital com lógica de negócio" em uma
+          demonstração técnica ao vivo: 3D interativo em Three.js, conteúdo 100% gerenciável em WordPress e
+          performance tratada como requisito de conversão.
+        </p>
+
+        <dl class="case-meta" data-reveal style="--delay: .3s">
+          <div>
+            <dt>Cliente</dt>
+            <dd>Wisionary Lab (agência digital)</dd>
+          </div>
+          <div>
+            <dt>Papel</dt>
+            <dd>Arquitetura WordPress, front-end e creative development</dd>
+          </div>
+          <div>
+            <dt>Stack</dt>
+            <dd>WordPress · PHP · Three.js · JS ES6+ · Sass</dd>
+          </div>
+          <div>
+            <dt>Ao vivo</dt>
+            <dd><a class="link-underline" href="https://wisionarylab.com/" target="_blank" rel="noopener">wisionarylab.com ↗</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="wrap" data-reveal>
+      <div class="case-cover">
+        <div class="cover-wisionary" aria-hidden="true">
+          <div class="cover-wisionary__top"><span>wisionarylab.com</span><span>Presença com estratégia</span></div>
+          <span class="cover-wisionary__orb"></span>
+          <p class="cover-wisionary__title">Quem tem visão<br>não precisa convencer.<br><span>Precisa aparecer.</span></p>
+          <div class="cover-wisionary__bottom"><span>WordPress · Three.js · Sass</span><span>2026</span></div>
+        </div>
+        <img src="../../assets/img/wc-projects_wisionarylab.webp" alt="Home do site Wisionary Lab" loading="lazy" onerror="this.remove()">
+      </div>
+    </div>
+
+    <!-- S · SITUAÇÃO -->
+    <section class="section" id="challenge" aria-labelledby="s-title">
+      <div class="wrap case-block">
+        <div class="case-block__aside">
+          <span class="case-block__label">S · Situação</span>
+          <h2 class="case-block__title" id="s-title">O site da agência é a primeira entrega.</h2>
+        </div>
+        <div class="prose" data-reveal>
+          <p>
+            A Wisionary Lab vende uma tese simples e exigente: <strong>antes de você dizer uma palavra, o cliente já
+            decidiu.</strong> Sites deixam de ser folders estáticos e passam a ser canais de aquisição, com estratégia,
+            copy forte e design que converte.
+          </p>
+          <p>
+            Isso cria um problema que nenhum cliente teria: o próprio site da agência é auditado por quem vai contratá-la.
+            Um LCP lento, uma animação que engasga no celular ou um formulário confuso não seriam só um bug; seriam
+            a refutação pública do discurso de venda.
+          </p>
+          <blockquote>
+            Se a agência promete presença com lógica de negócio, o site dela precisa ser o case mais difícil do
+            portfólio, não o mais fácil.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- T · TAREFA -->
+    <section class="section" aria-labelledby="t-title">
+      <div class="wrap case-block">
+        <div class="case-block__aside">
+          <span class="case-block__label">T · Tarefa</span>
+          <h2 class="case-block__title" id="t-title">Três forças que puxam para lados opostos.</h2>
+        </div>
+        <div class="prose" data-reveal>
+          <p>O briefing técnico se resumia a equilibrar três requisitos que, em projetos comuns, competem entre si:</p>
+          <h3>1. Performance brutal</h3>
+          <p>
+            SEO e conversão dependem de Core Web Vitals no verde em celulares intermediários com 4G, não em um MacBook
+            com fibra. O orçamento definido no início: <code>LCP &lt; 2,5s</code>, <code>INP &lt; 200ms</code>,
+            <code>CLS &lt; 0,1</code> e JavaScript crítico abaixo de 100 KB comprimido.
+          </p>
+          <h3>2. Impacto visual em 3D</h3>
+          <p>
+            Elementos tridimensionais dinâmicos em Three.js, reagindo ao scroll e ao ponteiro, para materializar a ideia
+            de "visão" da marca. WebGL é, por natureza, o recurso mais caro de uma página.
+          </p>
+          <h3>3. Autonomia de conteúdo</h3>
+          <p>
+            O time precisa editar textos, serviços, cases e FAQ sem depender de desenvolvedor e sem que uma edição
+            quebre o layout. Isso descarta page builders pesados e exige um modelo de conteúdo pensado.
+          </p>
+          <p>
+            Meu papel: desenhar a arquitetura do tema WordPress, implementar toda a camada de interação e garantir que
+            as três forças coexistissem em produção.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- A · AÇÃO -->
+    <section class="section" id="action" aria-labelledby="a-title">
+      <div class="wrap case-block">
+        <div class="case-block__aside">
+          <span class="case-block__label">A · Ação</span>
+          <h2 class="case-block__title" id="a-title">Engenharia a serviço da narrativa.</h2>
+          <div class="chips"><span class="chip">WordPress/PHP</span><span class="chip chip--gold">Three.js</span><span class="chip">Sass</span></div>
+        </div>
+        <div class="prose" data-reveal>
+          <h3>WordPress como plataforma de conteúdo, não de layout</h3>
+          <p>
+            Em vez de um page builder, construí um <strong>tema sob medida em PHP</strong>, no qual o design é código e o
+            conteúdo é dado. Cada seção da home (Gap, Serviços, Processo, Cases, Objeções, FAQ, Contato) virou um
+            <em>template part</em> isolado, alimentado por campos estruturados.
+          </p>
+          <ul>
+            <li><strong>Modelo de conteúdo explícito:</strong> serviços, cases e perguntas frequentes como tipos de
+              conteúdo próprios, com campos tipados (título, tier, descrição, CTA) em vez de um editor livre.</li>
+            <li><strong>Edição segura:</strong> o editor altera texto e ordem; tipografia, espaçamento e responsividade
+              continuam governados pelo tema. Ninguém "quebra o site" ao atualizar um serviço.</li>
+            <li><strong>Enxugamento do core:</strong> remoção de emojis, embeds, jQuery no front e estilos de blocos não
+              usados; assets enfileirados apenas nas rotas que os consomem.</li>
+            <li><strong>SEO no template:</strong> hierarquia de headings garantida pelo PHP, dados estruturados e metas
+              gerados a partir dos próprios campos.</li>
+          </ul>
+
+          <h3>Three.js sem destruir o scroll</h3>
+          <p>
+            A regra foi tratar o 3D como <strong>aprimoramento progressivo</strong>: o conteúdo e o LCP nunca esperam
+            pela cena. O WebGL entra depois, só se o dispositivo aguentar, e sai de cena quando não está visível.
+          </p>
+          <ul>
+            <li><strong>Fora do caminho crítico:</strong> a biblioteca é carregada via <code>import()</code> dinâmico
+              após o <code>load</code> e em <code>requestIdleCallback</code>. O HTML pinta primeiro; o 3D faz fade-in por
+              cima.</li>
+            <li><strong>Um único render loop:</strong> um <code>requestAnimationFrame</code> central, pausado por
+              <code>IntersectionObserver</code> quando a cena sai da viewport e por <code>visibilitychange</code> quando a
+              aba fica oculta. Zero GPU gasta com o que ninguém vê.</li>
+            <li><strong>Scroll desacoplado:</strong> o listener de scroll só grava um valor (<code>passive: true</code>);
+              quem lê e interpola é o loop. Nada de cálculo pesado dentro do evento.</li>
+            <li><strong>GPU sob controle:</strong> <code>devicePixelRatio</code> limitado (1,5 no mobile),
+              <code>powerPreference: "low-power"</code>, antialias desligado em telas densas e contagem de partículas
+              reduzida em telas pequenas.</li>
+            <li><strong>Assets 3D enxutos:</strong> geometria procedural sempre que possível; quando há modelo, glTF com
+              compressão Draco/Meshopt, texturas em potência de 2 e reutilização de materiais e geometrias para
+              minimizar draw calls.</li>
+            <li><strong>Saídas de emergência:</strong> sem WebGL, com <code>prefers-reduced-motion</code> ou
+              <code>Save-Data</code>, a cena simplesmente não carrega, e um gradiente estático ocupa o lugar.</li>
+          </ul>
+<pre class="code" aria-label="Exemplo de render loop pausável"><code><span class="c">// render loop único, pausado fora da viewport e com a aba oculta</span>
+<span class="k">let</span> rafId = <span class="k">null</span>, visible = <span class="k">true</span>;
+
+<span class="k">const</span> render = () =&gt; {
+  scroll.current += (scroll.target - scroll.current) * 0.08; <span class="c">// lerp</span>
+  mesh.rotation.y = scroll.current * 0.002;
+  renderer.render(scene, camera);
+  rafId = requestAnimationFrame(render);
+};
+
+<span class="k">const</span> start = () =&gt; { <span class="k">if</span> (rafId === <span class="k">null</span> &amp;&amp; visible &amp;&amp; !document.hidden) rafId = requestAnimationFrame(render); };
+<span class="k">const</span> stop  = () =&gt; { cancelAnimationFrame(rafId); rafId = <span class="k">null</span>; };
+
+<span class="k">new</span> IntersectionObserver(([e]) =&gt; { visible = e.isIntersecting; visible ? start() : stop(); }).observe(canvas);
+document.addEventListener(<span class="k">"visibilitychange"</span>, () =&gt; (document.hidden ? stop() : start()));
+addEventListener(<span class="k">"scroll"</span>, () =&gt; (scroll.target = scrollY), { passive: <span class="k">true</span> });</code></pre>
+
+          <h3>CSS: mobile-first, orientado a tokens</h3>
+          <p>
+            A interface foi escrita em <strong>Sass estruturado</strong>, com a marca codificada em tokens e componentes
+            que não sabem em qual página estão.
+          </p>
+          <ul>
+            <li><strong>Camadas claras:</strong> <code>tokens → base → layout → components → sections → utilities</code>.
+              Cada camada só consome a anterior, o que elimina guerras de especificidade.</li>
+            <li><strong>Tipografia fluida:</strong> escalas com <code>clamp()</code> substituem dezenas de media queries;
+              o título cresce com a viewport sem saltos.</li>
+            <li><strong>Mobile-first de verdade:</strong> o CSS base é o celular; breakpoints só adicionam. Isso reduz o
+              CSS que o mobile precisa interpretar.</li>
+            <li><strong>Animação barata:</strong> apenas <code>transform</code> e <code>opacity</code> animados, para
+              manter tudo na thread de composição e o INP baixo.</li>
+            <li><strong>CLS zero por design:</strong> mídia com dimensões declaradas, fontes com
+              <code>font-display: swap</code> e métricas compatíveis, canvas posicionado em camada absoluta.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- R · RESULTADO -->
+    <section class="section" id="results" aria-labelledby="r-title">
+      <div class="wrap case-block">
+        <div class="case-block__aside">
+          <span class="case-block__label">R · Resultado</span>
+          <h2 class="case-block__title" id="r-title">Uma vitrine técnica que também vende.</h2>
+        </div>
+        <div class="prose" data-reveal>
+          <p>
+            O site virou o argumento de venda mais forte da agência: em vez de <em>dizer</em> que entrega performance
+            e design que converte, ele <em>demonstra</em> isso durante a visita. A narrativa da home conduz a um único
+            CTA: o diagnóstico gratuito.
+          </p>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <!-- ATENÇÃO: valores abaixo são as metas do orçamento de performance.
+             Antes de publicar, substitua pelos números reais medidos no PageSpeed Insights / Search Console. -->
+        <div class="stats" data-reveal>
+          <div class="stat"><span class="stat__value">&lt;<span data-count="2.5">0</span><sup>s</sup></span><span class="stat__label">LCP mobile (meta)</span></div>
+          <div class="stat"><span class="stat__value">&lt;<span data-count="200">0</span><sup>ms</sup></span><span class="stat__label">INP (meta)</span></div>
+          <div class="stat"><span class="stat__value"><span data-count="0">0</span><sup>KB</sup></span><span class="stat__label">De 3D no caminho crítico</span></div>
+          <div class="stat"><span class="stat__value"><span data-count="100">0</span><sup>%</sup></span><span class="stat__label">Conteúdo editável no CMS</span></div>
+        </div>
+      </div>
+
+      <div class="wrap case-block" style="margin-top: clamp(3rem, 6vw, 5rem)">
+        <div class="case-block__aside">
+          <span class="case-block__label">Aprendizados</span>
+        </div>
+        <div class="prose" data-reveal>
+          <ul>
+            <li><strong>3D é narrativa, não decoração.</strong> Cada elemento tridimensional precisa reforçar uma
+              mensagem da copy; caso contrário, é custo sem retorno.</li>
+            <li><strong>Orçamento de performance antes do layout.</strong> Definir limites no dia 1 transforma
+              "o site está pesado" em uma decisão objetiva de projeto.</li>
+            <li><strong>Autonomia é arquitetura.</strong> Um CMS só dá liberdade ao cliente quando o modelo de conteúdo
+              impede que ele quebre o design.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Próximos passos">
+      <div class="wrap next-case">
+        <div>
+          <p class="section__index">Próximo</p>
+          <h2 class="section-title" data-split>Quer esse nível no seu projeto?</h2>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="../../#contact" data-magnetic>Vamos conversar <span class="btn__arrow" aria-hidden="true">↗</span></a>
+          <a class="btn" href="../../#work" data-magnetic>Ver outros cases</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>© <span id="year">2026</span> Weverton Costa · Feito à mão, sem framework</p>
+      <ul class="site-footer__socials">
+        <li><a href="https://github.com/Wev-at2" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/weverton-costa/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="../../">Home</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
